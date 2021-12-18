@@ -1,0 +1,38 @@
+Source-Makefile: package/mtk/applications/mtknvram/Makefile
+Package: nvram_utils
+Submenu: Applications
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread libnvram
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: mtk nvram tools
+Maintainer: 
+Source: nvram-66a28550.tar.gz
+Type: ipkg
+Description:   mtk nvram tools
+
+@@
+
+Package: nvramd
+Submenu: Applications
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread libnvram
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: mtk nvram daemon
+Maintainer: 
+Source: nvram-66a28550.tar.gz
+Type: ipkg
+Description:   mtk nvram daemon
+
+@@
+
+

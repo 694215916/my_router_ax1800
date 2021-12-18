@@ -1,0 +1,56 @@
+Source-Makefile: package/system/uci/Makefile
+Package: uci
+Version: 2018-01-01-141b64ef84f43c954e665865b1bbf216fbf7c05f-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libuci
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Base system
+Repository: base
+Title: Utility for the Unified Configuration Interface (UCI)
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: uci-2018-01-01-141b64ef84f43c954e665865b1bbf216fbf7c05f.tar.xz
+License: LGPL-2.1
+Type: ipkg
+Description: Utility for the Unified Configuration Interface (UCI)
+Felix Fietkau <nbd@nbd.name>
+@@
+
+Package: libuci
+Version: 2018-01-01-141b64ef84f43c954e665865b1bbf216fbf7c05f-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: C library for the Unified Configuration Interface (UCI)
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: uci-2018-01-01-141b64ef84f43c954e665865b1bbf216fbf7c05f.tar.xz
+License: LGPL-2.1
+Type: ipkg
+Description: C library for the Unified Configuration Interface (UCI)
+Felix Fietkau <nbd@nbd.name>
+@@
+
+Package: libuci-lua
+Version: 2018-01-01-141b64ef84f43c954e665865b1bbf216fbf7c05f-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libuci +liblua
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: Lua plugin for UCI
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: uci-2018-01-01-141b64ef84f43c954e665865b1bbf216fbf7c05f.tar.xz
+License: LGPL-2.1
+Type: ipkg
+Description: Lua plugin for UCI
+Felix Fietkau <nbd@nbd.name>
+@@
+
+

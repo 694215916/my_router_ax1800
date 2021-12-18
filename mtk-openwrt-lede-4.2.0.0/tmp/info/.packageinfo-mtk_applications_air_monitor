@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/applications/air_monitor/Makefile
+Package: air_monitor
+Submenu: Applications
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: Air Monitor Daemon
+Maintainer: 
+Source: air_monitor-be424fa9.tar.bz2
+Type: ipkg
+Description:   This is a sample daemon for test and verify function for Air Monitor in Driver.
+
+@@
+
+

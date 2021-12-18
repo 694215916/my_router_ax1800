@@ -1,0 +1,34 @@
+Source-Makefile: target/linux/xburst/Makefile
+Target: xburst
+Target-Board: xburst
+Target-Name: Ingenic XBurst
+Target-Arch: mipsel
+Target-Arch-Packages: mipsel_mips32
+Target-Features: audio display gpio nand rtc source-only targz ubifs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+CPU-Type: mips32
+Linux-Version: 3.18.43
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images for XBurst JZ47x0 based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd  
+Target: xburst/qi_lb60
+Target-Board: xburst
+Target-Name: QI Ben Nanonote (qi_lb60)
+Target-Arch: mipsel
+Target-Arch-Packages: mipsel_mips32
+Target-Features: audio display gpio nand rtc source-only targz ubifs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+CPU-Type: mips32
+Linux-Version: 3.18.43
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images for XBurst JZ47x0 based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd  
+

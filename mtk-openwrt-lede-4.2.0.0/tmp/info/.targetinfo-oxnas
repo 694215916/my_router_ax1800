@@ -1,0 +1,61 @@
+Source-Makefile: target/linux/oxnas/Makefile
+Target: oxnas
+Target-Board: oxnas
+Target-Name: PLXTECH/Oxford NAS782x/OX82x
+Target-Arch: arm
+Target-Arch-Packages: arm_mpcore
+Target-Features: dt gpio nand pci pcie ramdisk rtc squashfs ubifs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mcpu=mpcore
+CPU-Type: mpcore
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd block-mount fdisk lsblk mdadm kmod-ata-core kmod-ata-oxnas-sata kmod-button-hotplug kmod-input-gpio-keys-polled kmod-usb-ledtrig-usbport kmod-ledtrig-timer kmod-leds-gpio kmod-usb2-oxnas kmod-usb-storage uboot-envtools uboot-oxnas-ox820 
+Target-Profile: Default
+Target-Profile-Priority: 1
+Target-Profile-Name: Default Profile
+Target-Profile-Packages: kmod-i2c-gpio kmod-gpio-beeper kmod-hwmon-core kmod-hwmon-gpiofan kmod-rtc-pcf8563 kmod-rtc-ds1307 kmod-usb3 
+Target-Profile-Description:
+	Default package set compatible with most boards.
+@@
+
+Target-Profile: DEVICE_akitio
+Target-Profile-Name: Akitio MyCloud mini / Silverstone DC01
+Target-Profile-Packages: kmod-i2c-gpio kmod-rtc-ds1307
+Target-Profile-Description:
+Build firmware images for Akitio MyCloud mini / Silverstone DC01
+@@
+
+Target-Profile: DEVICE_kd20
+Target-Profile-Name: Shuttle KD20
+Target-Profile-Packages: kmod-usb3 kmod-i2c-gpio kmod-rtc-pcf8563 kmod-gpio-beeper kmod-hwmon-core kmod-hwmon-gpiofan kmod-md-mod kmod-md-raid0 kmod-md-raid1 kmod-fs-ext4 kmod-fs-xfs
+Target-Profile-Description:
+Build firmware images for Shuttle KD20
+@@
+
+Target-Profile: DEVICE_pogoplug-pro
+Target-Profile-Name: Cloud Engines Pogoplug Pro (with mPCIe)
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Cloud Engines Pogoplug Pro (with mPCIe)
+@@
+
+Target-Profile: DEVICE_pogoplug-v3
+Target-Profile-Name: Cloud Engines Pogoplug V3 (no mPCIe)
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Cloud Engines Pogoplug V3 (no mPCIe)
+@@
+
+Target-Profile: DEVICE_stg212
+Target-Profile-Name: MitraStar STG-212
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for MitraStar STG-212
+@@
+
+

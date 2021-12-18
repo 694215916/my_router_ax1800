@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/applications/long_loop/Makefile
+Package: longloopd
+Submenu: Applications
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: Daemon to monitor switch link for long distance(>100m)
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   Daemon to monitor switch link for long distance(>100m)
+
+@@
+
+

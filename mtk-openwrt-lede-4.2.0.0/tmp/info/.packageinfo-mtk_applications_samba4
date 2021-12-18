@@ -1,0 +1,32 @@
+Source-Makefile: package/mtk/applications/samba4/Makefile
+Package: samba4-server
+Submenu: Applications
+Version: 4.0.24-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +USE_UCLIBC:libpthread
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: MTK Properties
+Repository: base
+Title: Samba Server (V4)
+Maintainer: 
+Source: samba-4.0.24.tar.gz
+License: GPLv3
+LicenseFiles: COPYING
+Type: ipkg
+Description:  The Samba software suite is a collection of programs that implements the
+ SMB protocol for UNIX systems, allowing you to serve files and printers to
+ Windows, NT, OS/2 and DOS clients. This protocol is sometimes also referred
+ to as the LanManager or Netbios protocol.
+
+@@
+Config:
+	config PACKAGE_SAMBA_MAX_DEBUG_LEVEL
+		int "Maximum level of compiled-in debug messages"
+		depends on PACKAGE_samba4-server
+		default -1
+
+@@
+
+

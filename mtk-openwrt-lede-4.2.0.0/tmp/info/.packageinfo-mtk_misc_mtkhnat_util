@@ -1,0 +1,19 @@
+Source-Makefile: package/mtk/misc/mtkhnat_util/Makefile
+Package: mtkhnat_util
+Version: 1-r0-
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: mtk hnat utility
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   mtk hnat util to init hnat module
+
+@@
+
+

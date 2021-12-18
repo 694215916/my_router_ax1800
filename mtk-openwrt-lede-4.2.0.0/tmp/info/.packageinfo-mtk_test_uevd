@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/test/uevd/Makefile
+Package: uevd
+Submenu: Internal
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: Dump kernel uevent
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   Dump kernel uevent
+
+@@
+
+

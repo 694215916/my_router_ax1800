@@ -1,0 +1,19 @@
+Source-Makefile: package/utils/gtest/Makefile
+Package: gtest
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: sound
+Category: Sound
+Repository: base
+Title: Google Testing(Gtest)
+Maintainer: 
+Source: 
+Type: ipkg
+Description:  Google Testing and Mocking Framework.
+
+@@
+
+

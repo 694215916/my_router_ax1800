@@ -1,0 +1,28 @@
+Source-Makefile: package/mtk/applications/wificonf/Makefile
+Package: wificonf
+Menu: 1
+Submenu: Applications
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: Read/Write MTK WiFi profiles
+Maintainer: Hua Shao <nossiac@163.com>
+Source: 
+Type: ipkg
+Description:   Read/Write MTK WiFi profiles
+Hua Shao <nossiac@163.com>
+@@
+Config:
+	if PACKAGE_wificonf
+		config SUPPORT_LSDK_NVRAM_CMD
+			bool "Provide compatible usage for LSDK nvram command"
+			default n
+	endif
+@@
+
+

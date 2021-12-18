@@ -1,0 +1,15 @@
+--- a/drivers/net/ethernet/mediatek/mtk_eth_soc.c	2019-03-04 14:48:53.702507431 +0800
++++ b/drivers/net/ethernet/mediatek/mtk_eth_soc.c	2019-03-04 14:48:53.706507310 +0800
+@@ -1994,6 +1994,12 @@
+ static int mtk_hw_init(struct mtk_eth *eth)
+ {
+ 	int i, val, ret;
++	/*FIXME : ioc patch*/
++	void __iomem *reg_virt;
++#define sys_reg_write(phys, val) (__raw_writel(val, (void __iomem *)phys))
++	reg_virt = ioremap(0x10395000, 0x10);
++	sys_reg_write(reg_virt, 0x00000003);
++	/*-----------------*/
+
+ 	if (test_and_set_bit(MTK_HW_INIT, &eth->state))
+ 		return 0;

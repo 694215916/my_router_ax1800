@@ -1,0 +1,22 @@
+--- a/drivers/net/phy/Kconfig
++++ b/drivers/net/phy/Kconfig
+@@ -306,6 +306,12 @@
+ 	help
+ 	  This driver supports rtl8367s in mt7622
+ 
++config MTK_FE_GPHY
++	tristate "Driver for mediatek internal FE GPHY"
++	depends on NET_VENDOR_MEDIATEK
++	help
++	  Driver for Mediatek internal FE GPHY
++
+ config MDIO_BCM_UNIMAC
+	tristate "Broadcom UniMAC MDIO bus controller"
+	depends on HAS_IOMEM
+--- a/drivers/net/phy/Makefile
++++ b/drivers/net/phy/Makefile
+@@ -50,3 +50,4 @@
+ obj-$(CONFIG_MDIO_BCM_IPROC)	+= mdio-bcm-iproc.o
+ obj-$(CONFIG_MT753X_GSW)	+= mtk/mt753x/
+ obj-$(CONFIG_RTL8367S_GSW)	+= rtk/
++obj-$(CONFIG_MTK_FE_GPHY)	+= mtk/gphy/

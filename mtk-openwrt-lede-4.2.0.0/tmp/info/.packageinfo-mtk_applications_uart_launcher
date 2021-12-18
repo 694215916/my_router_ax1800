@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/applications/uart_launcher/Makefile
+Package: uart_launcher
+Submenu: Applications
+Version: mp-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +kmod-btmtk_uart
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: launcher for bluetooth uart driver
+Maintainer: 
+Source: uart_launcher-mp.tar.gz
+Type: ipkg
+Description:   The application will launch BT uart driver
+
+@@
+
+

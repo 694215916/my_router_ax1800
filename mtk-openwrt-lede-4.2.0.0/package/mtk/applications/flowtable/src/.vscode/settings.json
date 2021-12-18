@@ -1,0 +1,7 @@
+{
+        "files.associations": {
+                "FTNL.C": "cpp",
+                "GETOPT.C": "cpp",
+                "API.C": "cpp"
+        }
+}

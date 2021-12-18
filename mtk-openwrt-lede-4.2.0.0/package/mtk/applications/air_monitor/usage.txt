@@ -1,0 +1,5 @@
+[Note]:
+This a sample daemon for test and verify function for Air Monitor in Driver.
+
+[Usage]:
+air_monitor -d3 -ibr0 &

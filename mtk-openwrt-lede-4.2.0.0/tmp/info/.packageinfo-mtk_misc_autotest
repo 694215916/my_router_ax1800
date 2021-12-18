@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/misc/autotest/Makefile
+Package: autotest
+Submenu: Misc
+Version: 1-r0-
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: Autotest process
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   Autotest process
+
+@@
+
+

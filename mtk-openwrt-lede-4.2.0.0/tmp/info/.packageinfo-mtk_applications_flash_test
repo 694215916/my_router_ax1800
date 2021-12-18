@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/applications/flash_test/Makefile
+Package: flash_test
+Submenu: Applications
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +lmbench +lmbench-lmdd
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: Mediatek flash test tools/scripts
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   Some Mediatek flash tools to do test for SNOR/NAND/eMMC flash
+
+@@
+
+

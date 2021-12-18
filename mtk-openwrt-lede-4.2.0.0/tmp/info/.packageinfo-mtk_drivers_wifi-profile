@@ -1,0 +1,27 @@
+Source-Makefile: package/mtk/drivers/wifi-profile/Makefile
+Package: wifi-profile
+Menu: 1
+Submenu: Drivers
+Version: 1-r0-
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: Build WiFi l1profile.data on demand & install wifi l2 profile.
+Maintainer: 
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description:   This package helps to build l1profile on demand & install wifi l2 profile.
+
+@@
+Config:
+	if PACKAGE_wifi-profile
+	source "package/mtk/drivers/wifi-profile/l1profile.config.in"
+	endif
+@@
+
+

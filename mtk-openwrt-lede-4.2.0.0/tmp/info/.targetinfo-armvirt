@@ -1,0 +1,18 @@
+Source-Makefile: target/linux/armvirt/Makefile
+Target: armvirt
+Target-Board: armvirt
+Target-Name: QEMU ARM Virtual Machine
+Target-Arch: arm
+Target-Arch-Packages: arm_cortex-a15_neon-vfpv4
+Target-Features: arm_v7 cpiogz dt ext4 fpu gpio pci ramdisk rtc squashfs targz usb virtio
+Target-Depends: 
+Target-Optimization: -Os -pipe -mcpu=cortex-a15 -mfpu=neon-vfpv4
+CPU-Type: cortex-a15+neon-vfpv4
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+  Build images for QEMU ARM Virtual Machine
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd odhcp6c 
+

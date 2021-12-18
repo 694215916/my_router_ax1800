@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/test/firmware_test/Makefile
+Package: kmod-firmware_test
+Menu: 1
+Submenu: Misc
+Version: <LINUX_VERSION>+1-1
+Depends: 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: MTK Properties
+Title: Test firmware loading 
+Maintainer: Hua Shao <nossiac@163.com>
+Source: 
+Type: ipkg
+Description: Test firmware loading 
+Hua Shao <nossiac@163.com>
+@@
+
+

@@ -1,0 +1,65 @@
+Source-Makefile: package/boot/uboot-zynq/Makefile
+Package: uboot-zynq-zc702
+Version: 2016.03
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_zynq
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: zc702
+Section: boot
+Category: Boot Loaders
+Repository: base
+Title: U-Boot 2016.03 for Xilinx ZC702 Dev Board
+Maintainer: Jason Wu <jason.wu.misc@gmail.com>
+Source: u-boot-2016.03.tar.bz2
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: Licenses/README
+Type: ipkg
+Description: U-Boot 2016.03 for Xilinx ZC702 Dev Board
+http://www.denx.de/wiki/U-Boot
+Jason Wu <jason.wu.misc@gmail.com>
+@@
+
+Package: uboot-zynq-zed
+Version: 2016.03
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_zynq
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: zed
+Section: boot
+Category: Boot Loaders
+Repository: base
+Title: U-Boot 2016.03 for Avnet Digilent ZedBoard Dev Board
+Maintainer: Jason Wu <jason.wu.misc@gmail.com>
+Source: u-boot-2016.03.tar.bz2
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: Licenses/README
+Type: ipkg
+Description: U-Boot 2016.03 for Avnet Digilent ZedBoard Dev Board
+http://www.denx.de/wiki/U-Boot
+Jason Wu <jason.wu.misc@gmail.com>
+@@
+
+Package: uboot-zynq-zybo
+Version: 2016.03
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_zynq
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: zybo
+Section: boot
+Category: Boot Loaders
+Repository: base
+Title: U-Boot 2016.03 for Digilent Zybo Dev Board
+Maintainer: Jason Wu <jason.wu.misc@gmail.com>
+Source: u-boot-2016.03.tar.bz2
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: Licenses/README
+Type: ipkg
+Description: U-Boot 2016.03 for Digilent Zybo Dev Board
+http://www.denx.de/wiki/U-Boot
+Jason Wu <jason.wu.misc@gmail.com>
+@@
+
+

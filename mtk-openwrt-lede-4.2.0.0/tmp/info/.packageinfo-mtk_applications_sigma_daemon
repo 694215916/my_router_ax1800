@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/applications/sigma_daemon/Makefile
+Package: sigma_daemon
+Submenu: Applications
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +librt
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: SIGMA_DAEMON(WFA SIGMA DAEMON)
+Maintainer: 
+Source: sigma_daemon.tar.gz
+Type: ipkg
+Description:   SIGMA_DAEMON
+
+@@
+
+

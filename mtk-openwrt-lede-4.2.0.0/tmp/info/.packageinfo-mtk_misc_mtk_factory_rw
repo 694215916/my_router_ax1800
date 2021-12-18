@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/misc/mtk_factory_rw/Makefile
+Package: mtk_factory_rw
+Submenu: Misc
+Version: 1-r0-
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: mtk factory read and write
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   mtk factory's data read and write
+
+@@
+
+

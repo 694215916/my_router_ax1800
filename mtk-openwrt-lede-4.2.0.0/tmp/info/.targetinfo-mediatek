@@ -1,0 +1,234 @@
+Source-Makefile: target/linux/mediatek/Makefile
+Target: mediatek
+Target-Board: mediatek
+Target-Name: MediaTek ARM SoC
+Target-Arch: arm
+Target-Arch-Packages: arm_xscale
+Target-Features: nand squashfs ubifs
+Target-Depends: 
+Target-Optimization: -Os -pipe -mcpu=xscale
+CPU-Type: xscale
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+	Build images for Mediatek ARM-basd SoC.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd odhcp6c wpad-mini iwinfo
+Target: mediatek/mt7622
+Target-Board: mediatek
+Target-Name: MT7622 based boards
+Target-Arch: aarch64
+Target-Arch-Packages: aarch64_cortex-a53_neon-vfpv4
+Target-Features: dt gpio nand pci pcie rtc squashfs ubifs usb virtio
+Target-Depends: 
+Target-Optimization: -Os -pipe -mcpu=cortex-a53
+CPU-Type: cortex-a53+neon-vfpv4
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: arm64
+Target-Description:
+	Build images for MediaTek MT7622 based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd odhcp6c wpad-mini iwinfo
+Target-Profile: DEVICE_MTK-AC2600-MT7531
+Target-Profile-Name: MTK7622 ac2600 mt7531 RFB
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb-storage kmod-usb2 kmod-usb3 wireless-tools block-mount luci luci-app-mtk luci-app-samba ppp-mod-pppol2tp ppp-mod-pptp switch qdma kmod-sdhci-mtk
+Target-Profile-Description:
+Build firmware images for MTK7622 ac2600 mt7531 RFB
+@@
+
+Target-Profile: DEVICE_MTK-AC2600-RFB1
+Target-Profile-Name: MTK7622 ac2600 RFB1 AP
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb-storage kmod-usb2 kmod-usb3 kmod-ata-core kmod-ata-ahci-mtk wireless-tools block-mount luci luci-app-mtk luci-app-samba ppp-mod-pppol2tp ppp-mod-pptp switch qdma kmod-sdhci-mtk
+Target-Profile-Description:
+Build firmware images for MTK7622 ac2600 RFB1 AP
+@@
+
+Target-Profile: DEVICE_MTK-AC2600-Raeth
+Target-Profile-Name: MTK7622 ac2600 Raeth version
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb-storage kmod-usb2 kmod-usb3 wireless-tools block-mount luci luci-app-mtk luci-app-samba ppp-mod-pppol2tp ppp-mod-pptp switch qdma kmod-sdhci-mtk
+Target-Profile-Description:
+Build firmware images for MTK7622 ac2600 Raeth version
+@@
+
+Target-Profile: DEVICE_MTK-AC4300-MT7531
+Target-Profile-Name: MTK7622 ac4300 mt7531 RFB
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb-storage kmod-usb2 kmod-usb3 wireless-tools block-mount luci luci-app-mtk luci-app-samba ppp-mod-pppol2tp ppp-mod-pptp switch qdma kmod-sdhci-mtk
+Target-Profile-Description:
+Build firmware images for MTK7622 ac4300 mt7531 RFB
+@@
+
+Target-Profile: DEVICE_MTK-AC4300-MT7531-SB
+Target-Profile-Name: MTK7622 ac4300 mt7531 RFB SECUREBOOT
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb-storage kmod-usb2 kmod-usb3 wireless-tools block-mount luci luci-app-mtk luci-app-samba ppp-mod-pppol2tp ppp-mod-pptp switch qdma kmod-sdhci-mtk
+Target-Profile-Description:
+Build firmware images for MTK7622 ac4300 mt7531 RFB SECUREBOOT
+@@
+
+Target-Profile: DEVICE_MTK-AC4300-RFB1
+Target-Profile-Name: MTK7622 ac4300 RFB1 AP
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb-storage kmod-usb2 kmod-usb3 wireless-tools block-mount luci luci-app-mtk luci-app-samba ppp-mod-pppol2tp ppp-mod-pptp switch qdma kmod-sdhci-mtk
+Target-Profile-Description:
+Build firmware images for MTK7622 ac4300 RFB1 AP
+@@
+
+Target-Profile: DEVICE_MTK-AC4300-Raeth
+Target-Profile-Name: MTK7622 ac4300 Raeth version
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb-storage kmod-usb2 kmod-usb3 wireless-tools block-mount luci luci-app-mtk luci-app-samba ppp-mod-pppol2tp ppp-mod-pptp switch qdma kmod-sdhci-mtk
+Target-Profile-Description:
+Build firmware images for MTK7622 ac4300 Raeth version
+@@
+
+Target-Profile: DEVICE_MTK-AX3200
+Target-Profile-Name: MTK7622 ax3200 AP
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb-storage kmod-usb2 kmod-usb3 wireless-tools block-mount luci luci-app-mtk luci-app-samba ppp-mod-pppol2tp ppp-mod-pptp switch qdma kmod-sdhci-mtk
+Target-Profile-Description:
+Build firmware images for MTK7622 ax3200 AP
+@@
+
+Target-Profile: DEVICE_MTK-AX3200-MT7531
+Target-Profile-Name: MTK7622 ax3200 mt7531 AP
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb-storage kmod-usb2 kmod-usb3 wireless-tools block-mount luci luci-app-mtk luci-app-samba ppp-mod-pppol2tp ppp-mod-pptp switch qdma kmod-sdhci-mtk
+Target-Profile-Description:
+Build firmware images for MTK7622 ax3200 mt7531 AP
+@@
+
+Target-Profile: DEVICE_MTK-AX5600
+Target-Profile-Name: MTK7622 ax5600 AP
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb-storage kmod-usb2 kmod-usb3 wireless-tools block-mount luci luci-app-mtk luci-app-samba ppp-mod-pppol2tp ppp-mod-pptp switch qdma kmod-sdhci-mtk
+Target-Profile-Description:
+Build firmware images for MTK7622 ax5600 AP
+@@
+
+Target-Profile: DEVICE_MTK-AX5600-MT7531
+Target-Profile-Name: MTK7622 ax5600 mt7531 AP
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb-storage kmod-usb2 kmod-usb3 wireless-tools block-mount luci luci-app-mtk luci-app-samba ppp-mod-pppol2tp ppp-mod-pptp switch qdma kmod-sdhci-mtk
+Target-Profile-Description:
+Build firmware images for MTK7622 ax5600 mt7531 AP
+@@
+
+Target: mediatek/mt7623
+Target-Board: mediatek
+Target-Name: MT7623 based boards
+Target-Arch: arm
+Target-Arch-Packages: arm_cortex-a7_neon-vfpv4
+Target-Features: arm_v7 dt gpio nand pci pcie squashfs ubifs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mcpu=cortex-a7 -mfpu=neon-vfpv4
+CPU-Type: cortex-a7+neon-vfpv4
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+	Build images for MediaTek MT7623 based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd odhcp6c wpad-mini iwinfo
+Target-Profile: DEVICE_7623a-nand
+Target-Profile-Name: MTK7623a NAND AP
+Target-Profile-Packages: luci ppp-mod-pptp xl2tpd wireless-tools luci-app-mtk switch qdma kmod-usb-core kmod-usb-storage kmod-usb2 kmod-usb3 luci-app-samba block-mount kmod-fs-vfat kmod-fs-ext4 kmod-sdhci-mtk
+Target-Profile-Description:
+Build firmware images for MTK7623a NAND AP
+@@
+
+Target-Profile: DEVICE_7623n-emmc
+Target-Profile-Name: MTK7623n eMMC AP
+Target-Profile-Packages: luci ppp-mod-pptp xl2tpd wireless-tools luci-app-mtk switch qdma kmod-usb-core kmod-usb-storage kmod-usb2 kmod-usb3 luci-app-samba block-mount kmod-fs-vfat kmod-fs-ext4 kmod-sdhci-mtk
+Target-Profile-Description:
+Build firmware images for MTK7623n eMMC AP
+@@
+
+Target-Profile: DEVICE_7623a-emmc
+Target-Profile-Name: MTK7623a eMMC AP
+Target-Profile-Packages: luci ppp-mod-pptp xl2tpd wireless-tools luci-app-mtk switch qdma kmod-usb-core kmod-usb-storage kmod-usb2 kmod-usb3 luci-app-samba block-mount kmod-fs-vfat kmod-fs-ext4 kmod-sdhci-mtk
+Target-Profile-Description:
+Build firmware images for MTK7623a eMMC AP
+@@
+
+Target-Profile: DEVICE_7623n-emmc-gphy
+Target-Profile-Name: MTK7623n eMMC Gphy AP
+Target-Profile-Packages: luci ppp-mod-pptp xl2tpd wireless-tools luci-app-mtk switch qdma kmod-usb-core kmod-usb-storage kmod-usb2 kmod-usb3 luci-app-samba block-mount kmod-fs-vfat kmod-fs-ext4 kmod-sdhci-mtk
+Target-Profile-Description:
+Build firmware images for MTK7623n eMMC Gphy AP
+@@
+
+Target-Profile: DEVICE_7623n-nand
+Target-Profile-Name: MTK7623n NAND AP
+Target-Profile-Packages: luci ppp-mod-pptp xl2tpd wireless-tools luci-app-mtk switch qdma kmod-usb-core kmod-usb-storage kmod-usb2 kmod-usb3 luci-app-samba block-mount kmod-fs-vfat kmod-fs-ext4 kmod-sdhci-mtk
+Target-Profile-Description:
+Build firmware images for MTK7623n NAND AP
+@@
+
+Target: mediatek/mt7629
+Target-Board: mediatek
+Target-Name: MT7629 based boards
+Target-Arch: arm
+Target-Arch-Packages: arm_cortex-a7
+Target-Features: arm_v7 dt gpio nand pci pcie ramdisk squashfs ubifs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mcpu=cortex-a7
+CPU-Type: cortex-a7
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+	Build images for MediaTek MT7629 based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd odhcp6c wpad-mini iwinfo
+Target-Profile: DEVICE_MTK-7629-EVBv10
+Target-Profile-Name: MTK7629 EVB v10
+Target-Profile-Packages: regs luci ppp-mod-pptp xl2tpd wireless-tools luci-app-mtk luci-app-samba block-mount kmod-fs-vfat kmod-fs-ext4
+Target-Profile-Description:
+Build firmware images for MTK7629 EVB v10
+@@
+
+Target-Profile: DEVICE_MTK-7629-RAETHv10
+Target-Profile-Name: MTK7629 RAETH RFBv10
+Target-Profile-Packages: regs luci ppp-mod-pptp xl2tpd wireless-tools luci-app-mtk luci-app-samba block-mount kmod-fs-vfat kmod-fs-ext4
+Target-Profile-Description:
+Build firmware images for MTK7629 RAETH RFBv10
+@@
+
+Target-Profile: DEVICE_MTK-7629-RAETH
+Target-Profile-Name: MTK7629 RAETH RFB
+Target-Profile-Packages: regs luci ppp-mod-pptp xl2tpd wireless-tools luci-app-mtk luci-app-samba block-mount kmod-fs-vfat kmod-fs-ext4
+Target-Profile-Description:
+Build firmware images for MTK7629 RAETH RFB
+@@
+
+Target-Profile: DEVICE_MTK-7629-RFBv10
+Target-Profile-Name: MTK7629 RFBv10
+Target-Profile-Packages: regs luci ppp-mod-pptp xl2tpd wireless-tools luci-app-mtk luci-app-samba block-mount kmod-fs-vfat kmod-fs-ext4
+Target-Profile-Description:
+Build firmware images for MTK7629 RFBv10
+@@
+
+Target-Profile: DEVICE_MTK-7629-RFB
+Target-Profile-Name: MTK7629 RFB
+Target-Profile-Packages: regs luci ppp-mod-pptp xl2tpd wireless-tools luci-app-mtk luci-app-samba block-mount kmod-fs-vfat kmod-fs-ext4
+Target-Profile-Description:
+Build firmware images for MTK7629 RFB
+@@
+
+Target-Profile: DEVICE_MT7629-MT7531-EVB1
+Target-Profile-Name: MTK7629 MT7531 EVB1
+Target-Profile-Packages: regs luci ppp-mod-pptp xl2tpd wireless-tools luci-app-mtk luci-app-samba block-mount kmod-fs-vfat kmod-fs-ext4
+Target-Profile-Description:
+Build firmware images for MTK7629 MT7531 EVB1
+@@
+
+Target-Profile: DEVICE_MT7629-MT7531-EVB2
+Target-Profile-Name: MTK7629 MT7531 EVB2
+Target-Profile-Packages: regs luci ppp-mod-pptp xl2tpd wireless-tools luci-app-mtk luci-app-samba block-mount kmod-fs-vfat kmod-fs-ext4
+Target-Profile-Description:
+Build firmware images for MTK7629 MT7531 EVB2
+@@
+
+Target-Profile: DEVICE_MT7629-MT7531-RFB3
+Target-Profile-Name: MTK7629 MT7531 RFB3
+Target-Profile-Packages: regs luci ppp-mod-pptp xl2tpd wireless-tools luci-app-mtk luci-app-samba block-mount kmod-fs-vfat kmod-fs-ext4
+Target-Profile-Description:
+Build firmware images for MTK7629 MT7531 RFB3
+@@
+
+

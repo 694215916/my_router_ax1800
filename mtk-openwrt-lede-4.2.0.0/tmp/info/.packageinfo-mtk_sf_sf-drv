@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/sf/sf-drv/Makefile
+Package: kmod-sf
+Submenu: MT7622/29 serial flash utilities
+Version: <LINUX_VERSION>-1
+Depends: @TARGET_mediatek_mt7622||TARGET_mediatek_mt7629
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: MTK Properties
+Title: MT7622/29 serial flash helper
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   Helper driver used for MT7622 to access extra serial falsh features
+  e.g. Unique ID and SFDP
+
+@@
+
+

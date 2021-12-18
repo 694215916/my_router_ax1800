@@ -1,0 +1,2227 @@
+Source-Makefile: target/linux/ar71xx/Makefile
+Target: ar71xx
+Target-Board: ar71xx
+Target-Name: Atheros AR7xxx/AR9xxx
+Target-Arch: mips
+Target-Arch-Packages: mips_24kc
+Target-Features: dt gpio mips16 pci usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+CPU-Type: 24kc
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd odhcp6c kmod-gpio-button-hotplug swconfig kmod-ath9k wpad-mini uboot-envtools iwinfo
+Target: ar71xx/generic
+Target-Board: ar71xx
+Target-Name: Generic
+Target-Arch: mips
+Target-Arch-Packages: mips_24kc
+Target-Features: dt gpio mips16 pci squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+CPU-Type: 24kc
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images for generic Atheros AR71xx/AR913x/AR934x based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd odhcp6c kmod-gpio-button-hotplug swconfig kmod-ath9k wpad-mini uboot-envtools iwinfo
+Target-Profile: Default
+Target-Profile-Priority: 1
+Target-Profile-Name: Default Profile (all drivers)
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport 
+Target-Profile-Description:
+	Default package set compatible with most boards.
+@@
+
+Target-Profile: DEVICE_cpe210-220
+Target-Profile-Name: TP-LINK CPE210/220
+Target-Profile-Packages: rssileds
+Target-Profile-Description:
+Build firmware images for TP-LINK CPE210/220
+@@
+
+Target-Profile: DEVICE_cpe510-520
+Target-Profile-Name: TP-LINK CPE510/520
+Target-Profile-Packages: rssileds
+Target-Profile-Description:
+Build firmware images for TP-LINK CPE510/520
+@@
+
+Target-Profile: DEVICE_wbs210
+Target-Profile-Name: TP-LINK WBS210
+Target-Profile-Packages: rssileds
+Target-Profile-Description:
+Build firmware images for TP-LINK WBS210
+@@
+
+Target-Profile: DEVICE_wbs510
+Target-Profile-Name: TP-LINK WBS510
+Target-Profile-Packages: rssileds
+Target-Profile-Description:
+Build firmware images for TP-LINK WBS510
+@@
+
+Target-Profile: DEVICE_re450
+Target-Profile-Name: TP-LINK RE450
+Target-Profile-Packages: kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for TP-LINK RE450
+@@
+
+Target-Profile: DEVICE_eap120
+Target-Profile-Name: TP-LINK EAP120
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK EAP120
+@@
+
+Target-Profile: DEVICE_tl-wdr3500-v1
+Target-Profile-Name: TP-LINK TL-WDR3500 v1
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WDR3500 v1
+@@
+
+Target-Profile: DEVICE_tl-wdr3600-v1
+Target-Profile-Name: TP-LINK TL-WDR3600 v1
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WDR3600 v1
+@@
+
+Target-Profile: DEVICE_tl-wdr4300-v1
+Target-Profile-Name: TP-LINK TL-WDR4300 v1
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WDR4300 v1
+@@
+
+Target-Profile: DEVICE_tl-wdr4300-v1-il
+Target-Profile-Name: TP-LINK TL-WDR4300 v1 IL
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WDR4300 v1 IL
+@@
+
+Target-Profile: DEVICE_tl-wdr4310-v1
+Target-Profile-Name: TP-LINK TL-WDR4310 v1
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WDR4310 v1
+@@
+
+Target-Profile: DEVICE_mw4530r-v1
+Target-Profile-Name: Mercury MW4530R v1
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for Mercury MW4530R v1
+@@
+
+Target-Profile: DEVICE_tl-wdr6500-v2
+Target-Profile-Name: TP-LINK TL-WDR6500v2
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WDR6500v2
+@@
+
+Target-Profile: DEVICE_tl-wdr3320-v2
+Target-Profile-Name: TP-LINK TL-WDR3320v2
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WDR3320v2
+@@
+
+Target-Profile: DEVICE_archer-c5-v1
+Target-Profile-Name: TP-LINK Archer C5
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for TP-LINK Archer C5
+@@
+
+Target-Profile: DEVICE_archer-c7-v1
+Target-Profile-Name: TP-LINK Archer C7 v1
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for TP-LINK Archer C7 v1
+@@
+
+Target-Profile: DEVICE_archer-c7-v2
+Target-Profile-Name: TP-LINK Archer C7 v2
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for TP-LINK Archer C7 v2
+@@
+
+Target-Profile: DEVICE_archer-c7-v2-il
+Target-Profile-Name: TP-LINK Archer C7 v2 IL
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for TP-LINK Archer C7 v2 IL
+@@
+
+Target-Profile: DEVICE_tl-wdr7500-v3
+Target-Profile-Name: TP-LINK Archer C7 v3
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for TP-LINK Archer C7 v3
+@@
+
+Target-Profile: DEVICE_tl-mr10u-v1
+Target-Profile-Name: TP-LINK TL-MR10U
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-MR10U
+@@
+
+Target-Profile: DEVICE_tl-mr11u-v1
+Target-Profile-Name: TP-LINK TL-MR11U
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-MR11U
+@@
+
+Target-Profile: DEVICE_tl-mr11u-v2
+Target-Profile-Name: TP-LINK TL-MR11U v2
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-MR11U v2
+@@
+
+Target-Profile: DEVICE_tl-mr12u-v1
+Target-Profile-Name: TP-LINK TL-MR12U
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-MR12U
+@@
+
+Target-Profile: DEVICE_tl-mr13u-v1
+Target-Profile-Name: TP-LINK TL-MR13U
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-MR13U
+@@
+
+Target-Profile: DEVICE_tl-mr3020-v1
+Target-Profile-Name: TP-LINK TL-MR3020
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-MR3020
+@@
+
+Target-Profile: DEVICE_tl-mr3040-v1
+Target-Profile-Name: TP-LINK TL-MR3040
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-MR3040
+@@
+
+Target-Profile: DEVICE_tl-mr3040-v2
+Target-Profile-Name: TP-LINK TL-MR3040
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-MR3040
+@@
+
+Target-Profile: DEVICE_tl-mr3220-v1
+Target-Profile-Name: TP-LINK TL-MR3220
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-MR3220
+@@
+
+Target-Profile: DEVICE_tl-mr3220-v2
+Target-Profile-Name: TP-LINK TL-MR3220 v2
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-MR3220 v2
+@@
+
+Target-Profile: DEVICE_tl-mr3420-v1
+Target-Profile-Name: TP-LINK TL-MR3420
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-MR3420
+@@
+
+Target-Profile: DEVICE_tl-mr3420-v2
+Target-Profile-Name: TP-LINK TL-MR3420 v2
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-MR3420 v2
+@@
+
+Target-Profile: DEVICE_tl-wpa8630
+Target-Profile-Name: TP-LINK TL-WPA8630
+Target-Profile-Packages: kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WPA8630
+@@
+
+Target-Profile: DEVICE_tl-wr703n-v1
+Target-Profile-Name: TP-LINK TL-WR703N
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR703N
+@@
+
+Target-Profile: DEVICE_tl-wr710n-v1
+Target-Profile-Name: TP-LINK TL-WR710N
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR710N
+@@
+
+Target-Profile: DEVICE_tl-wr710n-v2
+Target-Profile-Name: TP-LINK TL-WR710N v2
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR710N v2
+@@
+
+Target-Profile: DEVICE_tl-wr710n-v2.1
+Target-Profile-Name: TP-LINK TL-WR710N v2.1
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR710N v2.1
+@@
+
+Target-Profile: DEVICE_tl-wr720n-v3
+Target-Profile-Name: TP-LINK TL-WR720N v3
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR720N v3
+@@
+
+Target-Profile: DEVICE_tl-wr720n-v4
+Target-Profile-Name: TP-LINK TL-WR720N v4
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR720N v4
+@@
+
+Target-Profile: DEVICE_tl-wr810n
+Target-Profile-Name: TP-Link TL-WR810N
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for TP-Link TL-WR810N
+@@
+
+Target-Profile: DEVICE_tl-wr740n-v1
+Target-Profile-Name: TP-LINK TL-WR740N/ND v1
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR740N/ND v1
+@@
+
+Target-Profile: DEVICE_tl-wr740n-v3
+Target-Profile-Name: TP-LINK TL-WR740N/ND v3
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR740N/ND v3
+@@
+
+Target-Profile: DEVICE_tl-wr740n-v4
+Target-Profile-Name: TP-LINK TL-WR740N/ND v4
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR740N/ND v4
+@@
+
+Target-Profile: DEVICE_tl-wr740n-v5
+Target-Profile-Name: TP-LINK TL-WR740N/ND v5
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR740N/ND v5
+@@
+
+Target-Profile: DEVICE_tl-wr740n-v6
+Target-Profile-Name: TP-LINK TL-WR740N/ND v6
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR740N/ND v6
+@@
+
+Target-Profile: DEVICE_tl-wr741nd-v1
+Target-Profile-Name: TP-LINK TL-WR741N/ND v1
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR741N/ND v1
+@@
+
+Target-Profile: DEVICE_tl-wr741nd-v2
+Target-Profile-Name: TP-LINK TL-WR741N/ND v2
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR741N/ND v2
+@@
+
+Target-Profile: DEVICE_tl-wr741nd-v4
+Target-Profile-Name: TP-LINK TL-WR741N/ND v4
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR741N/ND v4
+@@
+
+Target-Profile: DEVICE_tl-wr741nd-v5
+Target-Profile-Name: TP-LINK TL-WR741N/ND v5
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR741N/ND v5
+@@
+
+Target-Profile: DEVICE_tl-wr743nd-v1
+Target-Profile-Name: TP-LINK TL-WR743N/ND v1
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR743N/ND v1
+@@
+
+Target-Profile: DEVICE_tl-wr743nd-v2
+Target-Profile-Name: TP-LINK TL-WR743N/ND v2
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR743N/ND v2
+@@
+
+Target-Profile: DEVICE_tl-wr802n-v1
+Target-Profile-Name: TP-LINK TL-WR802N v1
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR802N v1
+@@
+
+Target-Profile: DEVICE_tl-wr841-v1.5
+Target-Profile-Name: TP-LINK TL-WR841N/ND v1.5
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR841N/ND v1.5
+@@
+
+Target-Profile: DEVICE_tl-wr841-v3
+Target-Profile-Name: TP-LINK TL-WR841N/ND v3
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR841N/ND v3
+@@
+
+Target-Profile: DEVICE_tl-wr841-v5
+Target-Profile-Name: TP-LINK TL-WR841N/ND v5
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR841N/ND v5
+@@
+
+Target-Profile: DEVICE_tl-wr841-v7
+Target-Profile-Name: TP-LINK TL-WR841N/ND v7
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR841N/ND v7
+@@
+
+Target-Profile: DEVICE_tl-wr841-v8
+Target-Profile-Name: TP-LINK TL-WR841N/ND v8
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR841N/ND v8
+@@
+
+Target-Profile: DEVICE_tl-wr841-v9
+Target-Profile-Name: TP-LINK TL-WR841N/ND v9
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR841N/ND v9
+@@
+
+Target-Profile: DEVICE_tl-wr841-v10
+Target-Profile-Name: TP-LINK TL-WR841N/ND v10
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR841N/ND v10
+@@
+
+Target-Profile: DEVICE_tl-wr841-v11
+Target-Profile-Name: TP-LINK TL-WR841N/ND v11
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR841N/ND v11
+@@
+
+Target-Profile: DEVICE_tl-wr841-v12
+Target-Profile-Name: TP-LINK TL-WR841N/ND v12
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR841N/ND v12
+@@
+
+Target-Profile: DEVICE_tl-wr842n-v1
+Target-Profile-Name: TP-LINK TL-WR842N/ND v1
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR842N/ND v1
+@@
+
+Target-Profile: DEVICE_tl-wr842n-v2
+Target-Profile-Name: TP-LINK TL-WR842N/ND v2
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR842N/ND v2
+@@
+
+Target-Profile: DEVICE_tl-wr842n-v3
+Target-Profile-Name: TP-LINK TL-WR842N/ND v3
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR842N/ND v3
+@@
+
+Target-Profile: DEVICE_tl-wr843nd-v1
+Target-Profile-Name: TP-LINK TL-WR843N/ND
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR843N/ND
+@@
+
+Target-Profile: DEVICE_tl-wr847n-v8
+Target-Profile-Name: TP-LINK TL-WR847N/ND v8
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR847N/ND v8
+@@
+
+Target-Profile: DEVICE_tl-wr941nd-v2
+Target-Profile-Name: TP-LINK TL-WR941N/ND v2
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR941N/ND v2
+@@
+
+Target-Profile: DEVICE_tl-wr941nd-v3
+Target-Profile-Name: TP-LINK TL-WR941N/ND v3
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR941N/ND v3
+@@
+
+Target-Profile: DEVICE_tl-wr941nd-v4
+Target-Profile-Name: TP-LINK TL-WR941N/ND v4
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR941N/ND v4
+@@
+
+Target-Profile: DEVICE_tl-wr941nd-v5
+Target-Profile-Name: TP-LINK TL-WR941N/ND v5
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR941N/ND v5
+@@
+
+Target-Profile: DEVICE_tl-wr941nd-v6
+Target-Profile-Name: TP-LINK TL-WR941N/ND v6
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR941N/ND v6
+@@
+
+Target-Profile: DEVICE_tl-wr941nd-v6-cn
+Target-Profile-Name: TP-LINK TL-WR941N/ND v6 (CN)
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR941N/ND v6 (CN)
+@@
+
+Target-Profile: DEVICE_tl-wr940n-v4
+Target-Profile-Name: TP-LINK TL-WR940N v4
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR940N v4
+@@
+
+Target-Profile: DEVICE_tl-wr1041n-v2
+Target-Profile-Name: TP-LINK TL-WR1041N
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR1041N
+@@
+
+Target-Profile: DEVICE_tl-wr1043nd-v1
+Target-Profile-Name: TP-LINK TL-WR1043N/ND v1
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR1043N/ND v1
+@@
+
+Target-Profile: DEVICE_tl-wr1043nd-v2
+Target-Profile-Name: TP-LINK TL-WR1043N/ND v2
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR1043N/ND v2
+@@
+
+Target-Profile: DEVICE_tl-wr1043nd-v3
+Target-Profile-Name: TP-LINK TL-WR1043N/ND v3
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR1043N/ND v3
+@@
+
+Target-Profile: DEVICE_tl-wr1043nd-v4
+Target-Profile-Name: TP-LINK TL-WR1043N/ND v4
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR1043N/ND v4
+@@
+
+Target-Profile: DEVICE_tl-wr2543-v1
+Target-Profile-Name: TP-LINK TL-WR2543N/ND
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WR2543N/ND
+@@
+
+Target-Profile: DEVICE_tl-wdr4900-v2
+Target-Profile-Name: TP-LINK TL-WDR4900v2
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WDR4900v2
+@@
+
+Target-Profile: DEVICE_tl-wa701nd-v1
+Target-Profile-Name: TP-LINK TL-WA701N/ND v1
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA701N/ND v1
+@@
+
+Target-Profile: DEVICE_tl-wa701nd-v2
+Target-Profile-Name: TP-LINK TL-WA701N/ND v2
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA701N/ND v2
+@@
+
+Target-Profile: DEVICE_tl-wa730re-v1
+Target-Profile-Name: TP-LINK TL-WA730RE
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA730RE
+@@
+
+Target-Profile: DEVICE_tl-wa750re-v1
+Target-Profile-Name: TP-LINK TL-WA750RE
+Target-Profile-Packages: rssileds
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA750RE
+@@
+
+Target-Profile: DEVICE_tl-wa7510n
+Target-Profile-Name: TP-LINK TL-WA7510N
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA7510N
+@@
+
+Target-Profile: DEVICE_tl-wa801nd-v1
+Target-Profile-Name: TP-LINK TL-WA801N/ND v1
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA801N/ND v1
+@@
+
+Target-Profile: DEVICE_tl-wa801nd-v2
+Target-Profile-Name: TP-LINK TL-WA801N/ND v2
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA801N/ND v2
+@@
+
+Target-Profile: DEVICE_tl-wa801nd-v3
+Target-Profile-Name: TP-LINK TL-WA801N/ND v3
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA801N/ND v3
+@@
+
+Target-Profile: DEVICE_tl-wa830re-v1
+Target-Profile-Name: TP-LINK TL-WA830RE
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA830RE
+@@
+
+Target-Profile: DEVICE_tl-wa830re-v2
+Target-Profile-Name: TP-LINK TL-WA830RE
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA830RE
+@@
+
+Target-Profile: DEVICE_tl-wa850re-v1
+Target-Profile-Name: TP-LINK TL-WA850RE
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA850RE
+@@
+
+Target-Profile: DEVICE_tl-wa860re-v1
+Target-Profile-Name: TP-LINK TL-WA860RE
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA860RE
+@@
+
+Target-Profile: DEVICE_tl-wa901nd-v1
+Target-Profile-Name: TP-LINK TL-WA901N/ND v1
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA901N/ND v1
+@@
+
+Target-Profile: DEVICE_tl-wa901nd-v2
+Target-Profile-Name: TP-LINK TL-WA901N/ND v2
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA901N/ND v2
+@@
+
+Target-Profile: DEVICE_tl-wa901nd-v3
+Target-Profile-Name: TP-LINK TL-WA901N/ND v3
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA901N/ND v3
+@@
+
+Target-Profile: DEVICE_tl-wa901nd-v4
+Target-Profile-Name: TP-LINK TL-WA901N/ND v4
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA901N/ND v4
+@@
+
+Target-Profile: DEVICE_tl-wa7210n-v2
+Target-Profile-Name: TP-LINK TL-WA7210N
+Target-Profile-Packages: rssileds kmod-ledtrig-netdev
+Target-Profile-Description:
+Build firmware images for TP-LINK TL-WA7210N
+@@
+
+Target-Profile: DEVICE_rw2458n
+Target-Profile-Name: Ubiquiti RW2458N
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti RW2458N
+@@
+
+Target-Profile: DEVICE_ubnt-airrouter
+Target-Profile-Name: Ubiquiti AirRouter
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti AirRouter
+@@
+
+Target-Profile: DEVICE_ubnt-bullet-m
+Target-Profile-Name: Ubiquiti Bullet-M
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti Bullet-M
+@@
+
+Target-Profile: DEVICE_ubnt-rocket-m
+Target-Profile-Name: Ubiquiti Rocket-M
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti Rocket-M
+@@
+
+Target-Profile: DEVICE_ubnt-nano-m
+Target-Profile-Name: Ubiquiti Nano-M
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti Nano-M
+@@
+
+Target-Profile: DEVICE_ubnt-unifi
+Target-Profile-Name: Ubiquiti UniFi
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti UniFi
+@@
+
+Target-Profile: DEVICE_ubnt-unifiac-lite
+Target-Profile-Name: Ubiquiti UniFi AC-Lite
+Target-Profile-Packages: kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for Ubiquiti UniFi AC-Lite
+@@
+
+Target-Profile: DEVICE_ubnt-unifiac-pro
+Target-Profile-Name: Ubiquiti UniFi AC-Pro
+Target-Profile-Packages: kmod-ath10k ath10k-firmware-qca988x kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti UniFi AC-Pro
+@@
+
+Target-Profile: DEVICE_ubnt-unifi-outdoor
+Target-Profile-Name: Ubiquiti UniFi Outdoor
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti UniFi Outdoor
+@@
+
+Target-Profile: DEVICE_ubnt-nano-m-xw
+Target-Profile-Name: Ubiquiti Nano M XW
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti Nano M XW
+@@
+
+Target-Profile: DEVICE_ubnt-loco-m-xw
+Target-Profile-Name: Ubiquiti Loco XW
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti Loco XW
+@@
+
+Target-Profile: DEVICE_ubnt-rocket-m-xw
+Target-Profile-Name: Ubiquiti Rocket M XW
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti Rocket M XW
+@@
+
+Target-Profile: DEVICE_ubnt-rocket-m-ti
+Target-Profile-Name: Ubiquiti Rocket M TI
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti Rocket M TI
+@@
+
+Target-Profile: DEVICE_ubnt-air-gateway
+Target-Profile-Name: Ubiquiti Air Gateway
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti Air Gateway
+@@
+
+Target-Profile: DEVICE_ubnt-air-gateway-pro
+Target-Profile-Name: Ubiquiti Air Gateway Pro
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti Air Gateway Pro
+@@
+
+Target-Profile: DEVICE_ubdev01
+Target-Profile-Name: Ubiquiti ubDEV01
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti ubDEV01
+@@
+
+Target-Profile: DEVICE_ubnt-rs
+Target-Profile-Name: Ubiquiti RouterStation
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti RouterStation
+@@
+
+Target-Profile: DEVICE_ubnt-rspro
+Target-Profile-Name: Ubiquiti RouterStation Pro
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti RouterStation Pro
+@@
+
+Target-Profile: DEVICE_ubnt-ls-sr71
+Target-Profile-Name: Ubiquiti LS-SR71
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Ubiquiti LS-SR71
+@@
+
+Target-Profile: DEVICE_ubnt-uap-pro
+Target-Profile-Name: Ubiquiti UAP Pro
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Ubiquiti UAP Pro
+@@
+
+Target-Profile: DEVICE_ubnt-unifi-outdoor-plus
+Target-Profile-Name: Ubiquiti UniFi Outdoor Plus
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Ubiquiti UniFi Outdoor Plus
+@@
+
+Target-Profile: DEVICE_ap90q
+Target-Profile-Name: YunCore AP90Q
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for YunCore AP90Q
+@@
+
+Target-Profile: DEVICE_bsb
+Target-Profile-Name: Smart Electronics Black Swift board
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for Smart Electronics Black Swift board
+@@
+
+Target-Profile: DEVICE_carambola2
+Target-Profile-Name: Carambola2 board from 8Devices
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for Carambola2 board from 8Devices
+@@
+
+Target-Profile: DEVICE_cf-e316n-v2
+Target-Profile-Name: COMFAST CF-E316N v2
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for COMFAST CF-E316N v2
+@@
+
+Target-Profile: DEVICE_cf-e320n-v2
+Target-Profile-Name: COMFAST CF-E320N v2
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for COMFAST CF-E320N v2
+@@
+
+Target-Profile: DEVICE_cf-e380ac-v1
+Target-Profile-Name: COMFAST CF-E380AC v1
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for COMFAST CF-E380AC v1
+@@
+
+Target-Profile: DEVICE_cf-e380ac-v2
+Target-Profile-Name: COMFAST CF-E380AC v2
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for COMFAST CF-E380AC v2
+@@
+
+Target-Profile: DEVICE_cf-e520n
+Target-Profile-Name: COMFAST CF-E520N
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for COMFAST CF-E520N
+@@
+
+Target-Profile: DEVICE_cf-e530n
+Target-Profile-Name: COMFAST CF-E530N
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for COMFAST CF-E530N
+@@
+
+Target-Profile: DEVICE_cpe830
+Target-Profile-Name: YunCore CPE830
+Target-Profile-Packages: rssileds
+Target-Profile-Description:
+Build firmware images for YunCore CPE830
+@@
+
+Target-Profile: DEVICE_cpe870
+Target-Profile-Name: YunCore CPE870
+Target-Profile-Packages: rssileds
+Target-Profile-Description:
+Build firmware images for YunCore CPE870
+@@
+
+Target-Profile: DEVICE_dragino2
+Target-Profile-Name: Dragino 2 (MS14)
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for Dragino 2 (MS14)
+@@
+
+Target-Profile: DEVICE_weio
+Target-Profile-Name: WeIO
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for WeIO
+@@
+
+Target-Profile: DEVICE_gl-ar150
+Target-Profile-Name: GL AR150
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for GL AR150
+@@
+
+Target-Profile: DEVICE_gl-ar300
+Target-Profile-Name: GL AR300
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for GL AR300
+@@
+
+Target-Profile: DEVICE_gl-ar300m
+Target-Profile-Name: GL AR300M
+Target-Profile-Packages: kmod-usb-core kmod-usb2 uboot-envtools
+Target-Profile-Description:
+Build firmware images for GL AR300M
+@@
+
+Target-Profile: DEVICE_gl-domino
+Target-Profile-Name: GL Domino Pi
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for GL Domino Pi
+@@
+
+Target-Profile: DEVICE_gl-mifi
+Target-Profile-Name: GL MIFI
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for GL MIFI
+@@
+
+Target-Profile: DEVICE_mr12
+Target-Profile-Name: Meraki MR12
+Target-Profile-Packages: kmod-spi-gpio
+Target-Profile-Description:
+Build firmware images for Meraki MR12
+@@
+
+Target-Profile: DEVICE_mr16
+Target-Profile-Name: Meraki MR16
+Target-Profile-Packages: kmod-spi-gpio
+Target-Profile-Description:
+Build firmware images for Meraki MR16
+@@
+
+Target-Profile: DEVICE_dr531
+Target-Profile-Name: Wallys DR531
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for Wallys DR531
+@@
+
+Target-Profile: DEVICE_wndr3700
+Target-Profile-Name: NETGEAR WNDR3700
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport kmod-leds-wndr3700-usb
+Target-Profile-Description:
+Build firmware images for NETGEAR WNDR3700
+@@
+
+Target-Profile: DEVICE_wndr3700v2
+Target-Profile-Name: NETGEAR WNDR3700 v2
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport kmod-leds-wndr3700-usb
+Target-Profile-Description:
+Build firmware images for NETGEAR WNDR3700 v2
+@@
+
+Target-Profile: DEVICE_wndr3800
+Target-Profile-Name: NETGEAR WNDR3800
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport kmod-leds-wndr3700-usb
+Target-Profile-Description:
+Build firmware images for NETGEAR WNDR3800
+@@
+
+Target-Profile: DEVICE_wndr3800ch
+Target-Profile-Name: NETGEAR WNDR3800 (Ch)
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport kmod-leds-wndr3700-usb
+Target-Profile-Description:
+Build firmware images for NETGEAR WNDR3800 (Ch)
+@@
+
+Target-Profile: DEVICE_wndrmac
+Target-Profile-Name: NETGEAR WNDRMAC
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport kmod-leds-wndr3700-usb
+Target-Profile-Description:
+Build firmware images for NETGEAR WNDRMAC
+@@
+
+Target-Profile: DEVICE_wndrmacv2
+Target-Profile-Name: NETGEAR WNDRMAC v2
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport kmod-leds-wndr3700-usb
+Target-Profile-Description:
+Build firmware images for NETGEAR WNDRMAC v2
+@@
+
+Target-Profile: DEVICE_cap324
+Target-Profile-Name: PowerCloud CAP324 Cloud AP
+Target-Profile-Packages: uboot-envtools
+Target-Profile-Description:
+Build firmware images for PowerCloud CAP324 Cloud AP
+@@
+
+Target-Profile: DEVICE_cap324-nocloud
+Target-Profile-Name: PowerCloud CAP324 Cloud AP (No-Cloud)
+Target-Profile-Packages: uboot-envtools
+Target-Profile-Description:
+Build firmware images for PowerCloud CAP324 Cloud AP (No-Cloud)
+@@
+
+Target-Profile: DEVICE_cr3000
+Target-Profile-Name: PowerCloud CR3000 Cloud Router
+Target-Profile-Packages: uboot-envtools
+Target-Profile-Description:
+Build firmware images for PowerCloud CR3000 Cloud Router
+@@
+
+Target-Profile: DEVICE_cr3000-nocloud
+Target-Profile-Name: PowerCloud CR3000 (No-Cloud)
+Target-Profile-Packages: uboot-envtools
+Target-Profile-Description:
+Build firmware images for PowerCloud CR3000 (No-Cloud)
+@@
+
+Target-Profile: DEVICE_cr5000
+Target-Profile-Name: PowerCloud CR5000 Cloud Router
+Target-Profile-Packages: uboot-envtools kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-usb-core
+Target-Profile-Description:
+Build firmware images for PowerCloud CR5000 Cloud Router
+@@
+
+Target-Profile: DEVICE_cr5000-nocloud
+Target-Profile-Name: PowerCloud CR5000 (No-Cloud)
+Target-Profile-Packages: uboot-envtools kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-usb-core
+Target-Profile-Description:
+Build firmware images for PowerCloud CR5000 (No-Cloud)
+@@
+
+Target-Profile: DEVICE_antminer-s1
+Target-Profile-Name: Antminer-S1
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-crypto-manager kmod-i2c-gpio-custom kmod-usb-hid
+Target-Profile-Description:
+Build firmware images for Antminer-S1
+@@
+
+Target-Profile: DEVICE_antminer-s3
+Target-Profile-Name: Antminer-S3
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-crypto-manager kmod-i2c-gpio-custom kmod-usb-hid
+Target-Profile-Description:
+Build firmware images for Antminer-S3
+@@
+
+Target-Profile: DEVICE_antrouter-r1
+Target-Profile-Name: Antrouter-R1
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for Antrouter-R1
+@@
+
+Target-Profile: DEVICE_el-m150
+Target-Profile-Name: EasyLink EL-M150
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for EasyLink EL-M150
+@@
+
+Target-Profile: DEVICE_el-mini
+Target-Profile-Name: EasyLink EL-MINI
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for EasyLink EL-MINI
+@@
+
+Target-Profile: DEVICE_gl-inet-6408A-v1
+Target-Profile-Name: GL.iNet 6408
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for GL.iNet 6408
+@@
+
+Target-Profile: DEVICE_gl-inet-6416A-v1
+Target-Profile-Name: GL.iNet 6416
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for GL.iNet 6416
+@@
+
+Target-Profile: DEVICE_jwap230
+Target-Profile-Name: jjPlus JWAP230
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for jjPlus JWAP230
+@@
+
+Target-Profile: DEVICE_rnx-n360rt
+Target-Profile-Name: Rosewill RNX-N360RT
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Rosewill RNX-N360RT
+@@
+
+Target-Profile: DEVICE_mc-mac1200r
+Target-Profile-Name: MERCURY MAC1200R
+Target-Profile-Packages: kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for MERCURY MAC1200R
+@@
+
+Target-Profile: DEVICE_minibox-v1
+Target-Profile-Name: Gainstrong MiniBox V1.0
+Target-Profile-Packages: kmod-usb-core kmod-usb2  kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for Gainstrong MiniBox V1.0
+@@
+
+Target-Profile: DEVICE_omy-g1
+Target-Profile-Name: OMYlink OMY-G1
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for OMYlink OMY-G1
+@@
+
+Target-Profile: DEVICE_omy-x1
+Target-Profile-Name: OMYlink OMY-X1
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for OMYlink OMY-X1
+@@
+
+Target-Profile: DEVICE_onion-omega
+Target-Profile-Name: Onion Omega
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-storage kmod-i2c-core kmod-i2c-gpio-custom kmod-spi-bitbang kmod-spi-dev kmod-spi-gpio kmod-spi-gpio-custom kmod-usb-serial
+Target-Profile-Description:
+Build firmware images for Onion Omega
+@@
+
+Target-Profile: DEVICE_smart-300
+Target-Profile-Name: NC-LINK SMART-300
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for NC-LINK SMART-300
+@@
+
+Target-Profile: DEVICE_som9331
+Target-Profile-Name: OpenEmbed SOM9331
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-storage kmod-i2c-core kmod-i2c-gpio-custom kmod-spi-bitbang kmod-spi-dev kmod-spi-gpio kmod-spi-gpio-custom kmod-usb-serial
+Target-Profile-Description:
+Build firmware images for OpenEmbed SOM9331
+@@
+
+Target-Profile: DEVICE_sr3200
+Target-Profile-Name: YunCore SR3200
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for YunCore SR3200
+@@
+
+Target-Profile: DEVICE_xd3200
+Target-Profile-Name: YunCore XD3200
+Target-Profile-Packages: kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for YunCore XD3200
+@@
+
+Target-Profile: DEVICE_tellstick-znet-lite
+Target-Profile-Name: TellStick ZNet Lite
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-acm kmod-usb-serial kmod-usb-serial-pl2303
+Target-Profile-Description:
+Build firmware images for TellStick ZNet Lite
+@@
+
+Target-Profile: DEVICE_oolite
+Target-Profile-Name: Gainstrong OOLITE
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for Gainstrong OOLITE
+@@
+
+Target-Profile: DEVICE_NBG6616
+Target-Profile-Name: ZyXEL NBG6616
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport kmod-usb-storage kmod-rtc-pcf8563 kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for ZyXEL NBG6616
+@@
+
+Target-Profile: DEVICE_c-55
+Target-Profile-Name: AirTight Networks C-55
+Target-Profile-Packages: kmod-ath9k
+Target-Profile-Description:
+Build firmware images for AirTight Networks C-55
+@@
+
+Target-Profile: DEVICE_hiwifi-hc6361
+Target-Profile-Name: HiWiFi HC6361
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-storage kmod-fs-ext4 kmod-nls-iso8859-1 e2fsprogs
+Target-Profile-Description:
+Build firmware images for HiWiFi HC6361
+@@
+
+Target-Profile: DEVICE_dir-869-a1
+Target-Profile-Name: D-Link DIR-869 rev. A1
+Target-Profile-Packages: kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for D-Link DIR-869 rev. A1
+@@
+
+Target-Profile: DEVICE_mynet-n600
+Target-Profile-Name: Western Digital My Net N600
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for Western Digital My Net N600
+@@
+
+Target-Profile: DEVICE_mynet-n750
+Target-Profile-Name: Western Digital My Net N750
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for Western Digital My Net N750
+@@
+
+Target-Profile: DEVICE_qihoo-c301
+Target-Profile-Name: Qihoo C301
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for Qihoo C301
+@@
+
+Target-Profile: DEVICE_dap-2695-a1
+Target-Profile-Name: D-Link DAP-2695 rev. A1
+Target-Profile-Packages: ath10k-firmware-qca988x kmod-ath10k uboot-envtools
+Target-Profile-Description:
+Build firmware images for D-Link DAP-2695 rev. A1
+@@
+
+Target-Profile: DEVICE_bhr-4grv2
+Target-Profile-Name: Buffalo BHR-4GRV2
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Buffalo BHR-4GRV2
+@@
+
+Target-Profile: DEVICE_A60
+Target-Profile-Name: OpenMesh A40/A60
+Target-Profile-Packages: om-watchdog kmod-ath10k ath10k-firmware-qca988x mod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for OpenMesh A40/A60
+@@
+
+Target-Profile: DEVICE_ALFANX
+Target-Profile-Name: ALFA Network N2/N5 board
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for ALFA Network N2/N5 board
+@@
+
+Target-Profile: DEVICE_HORNETUB
+Target-Profile-Name: ALFA Network Hornet-UB board (8MB flash, 32MB ram)
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for ALFA Network Hornet-UB board (8MB flash, 32MB ram)
+@@
+
+Target-Profile: DEVICE_TUBE2H8M
+Target-Profile-Name: ALFA Network Tube2H board (8MB flash)
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for ALFA Network Tube2H board (8MB flash)
+@@
+
+Target-Profile: DEVICE_AP96
+Target-Profile-Name: Atheros AP96 reference board
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for Atheros AP96 reference board
+@@
+
+Target-Profile: DEVICE_WNDAP360
+Target-Profile-Name: NETGEAR WNDAP360
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for NETGEAR WNDAP360
+@@
+
+Target-Profile: DEVICE_ALFAAP120C
+Target-Profile-Name: ALFA Network AP120C board
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for ALFA Network AP120C board
+@@
+
+Target-Profile: DEVICE_ALFAAP96
+Target-Profile-Name: ALFA Network AP96 board
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-rtc-pcf2123
+Target-Profile-Description:
+Build firmware images for ALFA Network AP96 board
+@@
+
+Target-Profile: DEVICE_ALL0258N
+Target-Profile-Name: Allnet ALL0258N
+Target-Profile-Packages: rssileds
+Target-Profile-Description:
+Build firmware images for Allnet ALL0258N
+@@
+
+Target-Profile: DEVICE_ALL0315N
+Target-Profile-Name: Allnet ALL0315N
+Target-Profile-Packages: rssileds
+Target-Profile-Description:
+Build firmware images for Allnet ALL0315N
+@@
+
+Target-Profile: DEVICE_AP121_8M
+Target-Profile-Name: Atheros AP121 reference board (8MB flash)
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for Atheros AP121 reference board (8MB flash)
+@@
+
+Target-Profile: DEVICE_AP121_16M
+Target-Profile-Name: Atheros AP121 reference board (16MB flash)
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for Atheros AP121 reference board (16MB flash)
+@@
+
+Target-Profile: DEVICE_AP132
+Target-Profile-Name: Atheros AP132 reference board
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-storage
+Target-Profile-Description:
+Build firmware images for Atheros AP132 reference board
+@@
+
+Target-Profile: DEVICE_AP135
+Target-Profile-Name: Atheros AP135 reference board
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-storage
+Target-Profile-Description:
+Build firmware images for Atheros AP135 reference board
+@@
+
+Target-Profile: DEVICE_AP136_010
+Target-Profile-Name: Atheros AP136-010 reference board
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-storage
+Target-Profile-Description:
+Build firmware images for Atheros AP136-010 reference board
+@@
+
+Target-Profile: DEVICE_AP136_020
+Target-Profile-Name: Atheros AP136-020 reference board
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-storage
+Target-Profile-Description:
+Build firmware images for Atheros AP136-020 reference board
+@@
+
+Target-Profile: DEVICE_AP143_8M
+Target-Profile-Name: Qualcomm Atheros AP143 reference board (8MB flash)
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-storage
+Target-Profile-Description:
+Build firmware images for Qualcomm Atheros AP143 reference board (8MB flash)
+@@
+
+Target-Profile: DEVICE_AP143_16M
+Target-Profile-Name: Qualcomm Atheros AP143 reference board (16MB flash)
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-storage
+Target-Profile-Description:
+Build firmware images for Qualcomm Atheros AP143 reference board (16MB flash)
+@@
+
+Target-Profile: DEVICE_AP147_010
+Target-Profile-Name: Qualcomm Atheros AP147-010 reference board
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-storage
+Target-Profile-Description:
+Build firmware images for Qualcomm Atheros AP147-010 reference board
+@@
+
+Target-Profile: DEVICE_AP152_16M
+Target-Profile-Name: Qualcomm Atheros AP152 reference board (16MB flash)
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-storage
+Target-Profile-Description:
+Build firmware images for Qualcomm Atheros AP152 reference board (16MB flash)
+@@
+
+Target-Profile: DEVICE_BXU2000N2
+Target-Profile-Name: BHU BXU2000n-2
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-storage
+Target-Profile-Description:
+Build firmware images for BHU BXU2000n-2
+@@
+
+Target-Profile: DEVICE_CAP4200AG
+Target-Profile-Name: Senao CAP4200AG
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Senao CAP4200AG
+@@
+
+Target-Profile: DEVICE_DB120
+Target-Profile-Name: Atheros DB120 reference board
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-storage
+Target-Profile-Description:
+Build firmware images for Atheros DB120 reference board
+@@
+
+Target-Profile: DEVICE_EWDORINAP
+Target-Profile-Name: Embedded Wireless Dorin Platform (4MB flash)
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport kmod-usb-storage
+Target-Profile-Description:
+Build firmware images for Embedded Wireless Dorin Platform (4MB flash)
+@@
+
+Target-Profile: DEVICE_EWDORINRT
+Target-Profile-Name: Embedded Wireless Dorin Router
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport kmod-usb-storage
+Target-Profile-Description:
+Build firmware images for Embedded Wireless Dorin Router
+@@
+
+Target-Profile: DEVICE_EWDORIN16M
+Target-Profile-Name: Embedded Wireless Dorin Platform (16MB flash)
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport kmod-usb-storage
+Target-Profile-Description:
+Build firmware images for Embedded Wireless Dorin Platform (16MB flash)
+@@
+
+Target-Profile: DEVICE_HORNETUBx2
+Target-Profile-Name: ALFA Network Hornet-UB-x2 board (16MB flash, 64MB ram)
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for ALFA Network Hornet-UB-x2 board (16MB flash, 64MB ram)
+@@
+
+Target-Profile: DEVICE_TUBE2H16M
+Target-Profile-Name: ALFA Network Tube2H board (16MB flash)
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for ALFA Network Tube2H board (16MB flash)
+@@
+
+Target-Profile: DEVICE_WLR8100
+Target-Profile-Name: Sitecom WLR-8100
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport kmod-usb3
+Target-Profile-Description:
+Build firmware images for Sitecom WLR-8100
+@@
+
+Target-Profile: DEVICE_WPJ342_16M
+Target-Profile-Name: Compex WPJ342 (16MB flash)
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Compex WPJ342 (16MB flash)
+@@
+
+Target-Profile: DEVICE_WPJ344_16M
+Target-Profile-Name: Compex WPJ344 (16MB flash)
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Compex WPJ344 (16MB flash)
+@@
+
+Target-Profile: DEVICE_DR344
+Target-Profile-Name: Wallys DR344
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Wallys DR344
+@@
+
+Target-Profile: DEVICE_WPJ531_16M
+Target-Profile-Name: Compex WPJ531 (16MB flash)
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Compex WPJ531 (16MB flash)
+@@
+
+Target-Profile: DEVICE_WPJ558_16M
+Target-Profile-Name: Compex WPJ558 (16MB flash)
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Compex WPJ558 (16MB flash)
+@@
+
+Target-Profile: DEVICE_WRTNODE2Q
+Target-Profile-Name: WRTnode2Q board
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-storage
+Target-Profile-Description:
+Build firmware images for WRTnode2Q board
+@@
+
+Target-Profile: DEVICE_YUN_8M
+Target-Profile-Name: Arduino Yun based on Atheros AR9331 (8MB flash)
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for Arduino Yun based on Atheros AR9331 (8MB flash)
+@@
+
+Target-Profile: DEVICE_YUN_16M
+Target-Profile-Name: Arduino Yun based on Atheros AR9331 (16MB flash)
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for Arduino Yun based on Atheros AR9331 (16MB flash)
+@@
+
+Target-Profile: DEVICE_F9K1115V2
+Target-Profile-Name: Belkin AC1750DB (F9K1115V2)
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb3 kmod-usb-ledtrig-usbport kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for Belkin AC1750DB (F9K1115V2)
+@@
+
+Target-Profile: DEVICE_DIR600A1
+Target-Profile-Name: D-Link DIR-600 rev. A1
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for D-Link DIR-600 rev. A1
+@@
+
+Target-Profile: DEVICE_DIR601A1
+Target-Profile-Name: D-Link DIR-601 rev. A1
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for D-Link DIR-601 rev. A1
+@@
+
+Target-Profile: DEVICE_FR54RTR
+Target-Profile-Name: Frys FR-54RTR
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Frys FR-54RTR
+@@
+
+Target-Profile: DEVICE_DIR615E1
+Target-Profile-Name: D-Link DIR-615 rev. E1
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for D-Link DIR-615 rev. E1
+@@
+
+Target-Profile: DEVICE_DIR615E4
+Target-Profile-Name: D-Link DIR-615 rev. E4
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for D-Link DIR-615 rev. E4
+@@
+
+Target-Profile: DEVICE_DIR615I1
+Target-Profile-Name: D-Link DIR-615 rev. I1
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for D-Link DIR-615 rev. I1
+@@
+
+Target-Profile: DEVICE_DIR615I3
+Target-Profile-Name: D-Link DIR-615 rev. I3
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for D-Link DIR-615 rev. I3
+@@
+
+Target-Profile: DEVICE_A02RBW300N
+Target-Profile-Name: Atlantis-Land A02-RB-W300N
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Atlantis-Land A02-RB-W300N
+@@
+
+Target-Profile: DEVICE_DIR615C1
+Target-Profile-Name: D-Link DIR-615 rev. C1
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for D-Link DIR-615 rev. C1
+@@
+
+Target-Profile: DEVICE_TEW632BRP
+Target-Profile-Name: TRENDNet TEW-632BRP
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TRENDNet TEW-632BRP
+@@
+
+Target-Profile: DEVICE_TEW652BRP_FW
+Target-Profile-Name: TRENDNet TEW-652BRP
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TRENDNet TEW-652BRP
+@@
+
+Target-Profile: DEVICE_TEW652BRP_RECOVERY
+Target-Profile-Name: TRENDNet TEW-652BRP (recovery)
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TRENDNet TEW-652BRP (recovery)
+@@
+
+Target-Profile: DEVICE_TEW712BR
+Target-Profile-Name: TRENDNet TEW-712BR
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TRENDNet TEW-712BR
+@@
+
+Target-Profile: DEVICE_DIR601B1
+Target-Profile-Name: D-Link DIR-601 rev. B1
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for D-Link DIR-601 rev. B1
+@@
+
+Target-Profile: DEVICE_DIR505A1
+Target-Profile-Name: D-Link DIR-505 rev. A1
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for D-Link DIR-505 rev. A1
+@@
+
+Target-Profile: DEVICE_DGL5500A1
+Target-Profile-Name: D-Link DGL-5500 rev. A1
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for D-Link DGL-5500 rev. A1
+@@
+
+Target-Profile: DEVICE_TEW823DRU
+Target-Profile-Name: TRENDNet TEW-823DRU
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for TRENDNet TEW-823DRU
+@@
+
+Target-Profile: DEVICE_DHP1565A1
+Target-Profile-Name: D-Link DHP-1565 rev. A1
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for D-Link DHP-1565 rev. A1
+@@
+
+Target-Profile: DEVICE_DIR825C1
+Target-Profile-Name: D-Link DIR-825 rev. C1
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for D-Link DIR-825 rev. C1
+@@
+
+Target-Profile: DEVICE_DIR835A1
+Target-Profile-Name: D-Link DIR-835 rev. A1
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for D-Link DIR-835 rev. A1
+@@
+
+Target-Profile: DEVICE_TEW732BR
+Target-Profile-Name: TRENDNet TEW-732BR
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for TRENDNet TEW-732BR
+@@
+
+Target-Profile: DEVICE_WRT160NL
+Target-Profile-Name: Linksys WRT160NL
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for Linksys WRT160NL
+@@
+
+Target-Profile: DEVICE_MYNETREXT
+Target-Profile-Name: WD My Net Wi-Fi Range Extender
+Target-Profile-Packages: rssileds
+Target-Profile-Description:
+Build firmware images for WD My Net Wi-Fi Range Extender
+@@
+
+Target-Profile: DEVICE_DIR825B1
+Target-Profile-Name: D-Link DIR-825 rev. B1
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for D-Link DIR-825 rev. B1
+@@
+
+Target-Profile: DEVICE_TEW673GRU
+Target-Profile-Name: TRENDNet TEW-673GRU
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for TRENDNet TEW-673GRU
+@@
+
+Target-Profile: DEVICE_DLRTDEV01
+Target-Profile-Name: PowerCloud Systems dlrtdev01 model
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for PowerCloud Systems dlrtdev01 model
+@@
+
+Target-Profile: DEVICE_dLAN_Hotspot
+Target-Profile-Name: devolo dLAN Hotspot
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for devolo dLAN Hotspot
+@@
+
+Target-Profile: DEVICE_dLAN_pro_500_wp
+Target-Profile-Name: devolo dLAN pro 500 Wireless+
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for devolo dLAN pro 500 Wireless+
+@@
+
+Target-Profile: DEVICE_dLAN_pro_1200_ac
+Target-Profile-Name: devolo dLAN pro 1200+ WiFi ac
+Target-Profile-Packages: kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for devolo dLAN pro 1200+ WiFi ac
+@@
+
+Target-Profile: DEVICE_ESR900
+Target-Profile-Name: EnGenius ESR900
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for EnGenius ESR900
+@@
+
+Target-Profile: DEVICE_ESR1750
+Target-Profile-Name: EnGenius ESR1750
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-storage kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for EnGenius ESR1750
+@@
+
+Target-Profile: DEVICE_EPG5000
+Target-Profile-Name: EnGenius EPG5000
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-storage kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for EnGenius EPG5000
+@@
+
+Target-Profile: DEVICE_WP543_4M
+Target-Profile-Name: Compex WP543/WPJ543 (4MB flash)
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Compex WP543/WPJ543 (4MB flash)
+@@
+
+Target-Profile: DEVICE_WP543_8M
+Target-Profile-Name: Compex WP543/WPJ543 (8MB flash)
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Compex WP543/WPJ543 (8MB flash)
+@@
+
+Target-Profile: DEVICE_WP543_16M
+Target-Profile-Name: Compex WP543/WPJ543 (16MB flash)
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Compex WP543/WPJ543 (16MB flash)
+@@
+
+Target-Profile: DEVICE_WPE72_4M
+Target-Profile-Name: Compex WPE72/WPE72NX (4MB flash)
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Compex WPE72/WPE72NX (4MB flash)
+@@
+
+Target-Profile: DEVICE_WPE72_8M
+Target-Profile-Name: Compex WPE72/WPE72NX (8MB flash)
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Compex WPE72/WPE72NX (8MB flash)
+@@
+
+Target-Profile: DEVICE_WPE72_16M
+Target-Profile-Name: Compex WPE72/WPE72NX (16MB flash)
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Compex WPE72/WPE72NX (16MB flash)
+@@
+
+Target-Profile: DEVICE_WNR2000
+Target-Profile-Name: NETGEAR WNR2000V1
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for NETGEAR WNR2000V1
+@@
+
+Target-Profile: DEVICE_WNR2000V3
+Target-Profile-Name: NETGEAR WNR2000V3
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for NETGEAR WNR2000V3
+@@
+
+Target-Profile: DEVICE_WNR2000V4
+Target-Profile-Name: NETGEAR WNR2000V4
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for NETGEAR WNR2000V4
+@@
+
+Target-Profile: DEVICE_WNR2200
+Target-Profile-Name: NETGEAR WNR2200
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for NETGEAR WNR2200
+@@
+
+Target-Profile: DEVICE_REALWNR612V2
+Target-Profile-Name: NETGEAR WNR612V2
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for NETGEAR WNR612V2
+@@
+
+Target-Profile: DEVICE_N150R
+Target-Profile-Name: On Networks N150
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for On Networks N150
+@@
+
+Target-Profile: DEVICE_REALWNR1000V2
+Target-Profile-Name: NETGEAR WNR1000V2
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for NETGEAR WNR1000V2
+@@
+
+Target-Profile: DEVICE_WNR1000V2_VC
+Target-Profile-Name: NETGEAR WNR1000V2-VC
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for NETGEAR WNR1000V2-VC
+@@
+
+Target-Profile: DEVICE_WPN824N
+Target-Profile-Name: NETGEAR WPN824N
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for NETGEAR WPN824N
+@@
+
+Target-Profile: DEVICE_OM2P
+Target-Profile-Name: OpenMesh OM2P/OM2P-HS/OM2P-LC
+Target-Profile-Packages: om-watchdog
+Target-Profile-Description:
+Build firmware images for OpenMesh OM2P/OM2P-HS/OM2P-LC
+@@
+
+Target-Profile: DEVICE_OM5P
+Target-Profile-Name: OpenMesh OM5P/OM5P-AN
+Target-Profile-Packages: om-watchdog
+Target-Profile-Description:
+Build firmware images for OpenMesh OM5P/OM5P-AN
+@@
+
+Target-Profile: DEVICE_OM5PAC
+Target-Profile-Name: OpenMesh OM5P-AC
+Target-Profile-Packages: kmod-ath10k ath10k-firmware-qca988x om-watchdog
+Target-Profile-Description:
+Build firmware images for OpenMesh OM5P-AC
+@@
+
+Target-Profile: DEVICE_MR600
+Target-Profile-Name: OpenMesh MR600
+Target-Profile-Packages: om-watchdog
+Target-Profile-Description:
+Build firmware images for OpenMesh MR600
+@@
+
+Target-Profile: DEVICE_MR900
+Target-Profile-Name: OpenMesh MR900
+Target-Profile-Packages: om-watchdog
+Target-Profile-Description:
+Build firmware images for OpenMesh MR900
+@@
+
+Target-Profile: DEVICE_MR1750
+Target-Profile-Name: OpenMesh MR1750
+Target-Profile-Packages: om-watchdog kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for OpenMesh MR1750
+@@
+
+Target-Profile: DEVICE_ALL0305
+Target-Profile-Name: Allnet ALL0305
+Target-Profile-Packages: fconfig kmod-ath5k -kmod-ath9k
+Target-Profile-Description:
+Build firmware images for Allnet ALL0305
+@@
+
+Target-Profile: DEVICE_EAP7660D
+Target-Profile-Name: Senao EAP7660D
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Senao EAP7660D
+@@
+
+Target-Profile: DEVICE_JA76PF
+Target-Profile-Name: jjPlus JA76PF
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-hwmon-core kmod-i2c-core kmod-hwmon-lm75
+Target-Profile-Description:
+Build firmware images for jjPlus JA76PF
+@@
+
+Target-Profile: DEVICE_JA76PF2
+Target-Profile-Name: jjPlus JA76PF2
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for jjPlus JA76PF2
+@@
+
+Target-Profile: DEVICE_JWAP003
+Target-Profile-Name: jjPlus JWAP003
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for jjPlus JWAP003
+@@
+
+Target-Profile: DEVICE_PB42
+Target-Profile-Name: Atheros PB42 reference board
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2
+Target-Profile-Description:
+Build firmware images for Atheros PB42 reference board
+@@
+
+Target-Profile: DEVICE_PB44
+Target-Profile-Name: Atheros PB44 reference board
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 vsc7385-ucode-pb44 vsc7395-ucode-pb44
+Target-Profile-Description:
+Build firmware images for Atheros PB44 reference board
+@@
+
+Target-Profile: DEVICE_MZKW04NU
+Target-Profile-Name: Planex MZK-W04NU
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for Planex MZK-W04NU
+@@
+
+Target-Profile: DEVICE_MZKW300NH
+Target-Profile-Name: Planex MZK-W300NH
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Planex MZK-W300NH
+@@
+
+Target-Profile: DEVICE_EAP300V2
+Target-Profile-Name: EnGenius EAP300V2
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for EnGenius EAP300V2
+@@
+
+Target-Profile: DEVICE_WHRG301N
+Target-Profile-Name: Buffalo WHR-G301N
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Buffalo WHR-G301N
+@@
+
+Target-Profile: DEVICE_WHRHPG300N
+Target-Profile-Name: Buffalo WHR-HP-G300N
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Buffalo WHR-HP-G300N
+@@
+
+Target-Profile: DEVICE_WHRHPGN
+Target-Profile-Name: Buffalo WHR-HP-GN
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Buffalo WHR-HP-GN
+@@
+
+Target-Profile: DEVICE_WLAEAG300N
+Target-Profile-Name: Buffalo WLAE-AG300N
+Target-Profile-Packages: kmod-ledtrig-netdev
+Target-Profile-Description:
+Build firmware images for Buffalo WLAE-AG300N
+@@
+
+Target-Profile: DEVICE_WRT400N
+Target-Profile-Name: Linksys WRT400N
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Linksys WRT400N
+@@
+
+Target-Profile: DEVICE_WZRHPG300NH
+Target-Profile-Name: Buffalo WZR-HP-G300NH
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for Buffalo WZR-HP-G300NH
+@@
+
+Target-Profile: DEVICE_WZRHPG300NH2
+Target-Profile-Name: Buffalo WZR-HP-G300NH2
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for Buffalo WZR-HP-G300NH2
+@@
+
+Target-Profile: DEVICE_WZRHPAG300H
+Target-Profile-Name: Buffalo WZR-HP-AG300H
+Target-Profile-Packages: kmod-usb-ohci kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for Buffalo WZR-HP-AG300H
+@@
+
+Target-Profile: DEVICE_WZRHPG450H
+Target-Profile-Name: Buffalo WZR-HP-G450H
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for Buffalo WZR-HP-G450H
+@@
+
+Target-Profile: DEVICE_WZR600DHP
+Target-Profile-Name: Buffalo WZR-600DHP
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for Buffalo WZR-600DHP
+@@
+
+Target-Profile: DEVICE_WZR450HP2
+Target-Profile-Name: Buffalo WZR-450HP2
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for Buffalo WZR-450HP2
+@@
+
+Target-Profile: DEVICE_ZBTWE1526
+Target-Profile-Name: Zbtlink ZBT-WE1526
+Target-Profile-Packages: kmod-usb-core kmod-usb2
+Target-Profile-Description:
+Build firmware images for Zbtlink ZBT-WE1526
+@@
+
+Target-Profile: DEVICE_ZCN1523H28
+Target-Profile-Name: Zcomax ZCN-1523H-2-8
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Zcomax ZCN-1523H-2-8
+@@
+
+Target-Profile: DEVICE_ZCN1523H516
+Target-Profile-Name: Zcomax ZCN-1523H-5-16
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Zcomax ZCN-1523H-5-16
+@@
+
+Target-Profile: DEVICE_NBG_460N_550N_550NH
+Target-Profile-Name: Zyxel NBG 460N/550N/550NH
+Target-Profile-Packages: kmod-rtc-pcf8563
+Target-Profile-Description:
+Build firmware images for Zyxel NBG 460N/550N/550NH
+@@
+
+Target: ar71xx/nand
+Target-Board: ar71xx
+Target-Name: Generic devices with NAND flash
+Target-Arch: mips
+Target-Arch-Packages: mips_24kc
+Target-Features: dt gpio mips16 nand pci rtc squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+CPU-Type: 24kc
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images for Atheros AR71xx/AR913x based boards with
+	NAND flash, e.g. Netgear WNDR4300.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd odhcp6c kmod-gpio-button-hotplug swconfig kmod-ath9k wpad-mini uboot-envtools iwinfo
+Target-Profile: Default
+Target-Profile-Priority: 1
+Target-Profile-Name: Default Profile
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport 
+Target-Profile-Description:
+	Default package set compatible with most boards.
+@@
+
+Target-Profile: DEVICE_c-60
+Target-Profile-Name: AirTight C-60
+Target-Profile-Packages: kmod-spi-gpio kmod-usb-core kmod-usb2 kmod-ath9k
+Target-Profile-Description:
+Build firmware images for AirTight C-60
+@@
+
+Target-Profile: DEVICE_domywifi-dw33d
+Target-Profile-Name: DomyWifi DW33D
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-storage kmod-usb-ledtrig-usbport kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for DomyWifi DW33D
+@@
+
+Target-Profile: DEVICE_mr18
+Target-Profile-Name: Meraki MR18
+Target-Profile-Packages: kmod-spi-gpio kmod-ath9k
+Target-Profile-Description:
+Build firmware images for Meraki MR18
+@@
+
+Target-Profile: DEVICE_z1
+Target-Profile-Name: Meraki Z1
+Target-Profile-Packages: kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport kmod-spi-gpio kmod-ath9k kmod-owl-loader
+Target-Profile-Description:
+Build firmware images for Meraki Z1
+@@
+
+Target-Profile: DEVICE_R6100
+Target-Profile-Name: NETGEAR R6100
+Target-Profile-Packages: kmod-ath10k ath10k-firmware-qca988x kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for NETGEAR R6100
+@@
+
+Target-Profile: DEVICE_WNDR3700V4
+Target-Profile-Name: NETGEAR WNDR3700v4
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for NETGEAR WNDR3700v4
+@@
+
+Target-Profile: DEVICE_WNDR4300V1
+Target-Profile-Name: NETGEAR WNDR4300v1
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for NETGEAR WNDR4300v1
+@@
+
+Target-Profile: DEVICE_NBG6716
+Target-Profile-Name: Zyxel NBG 6716
+Target-Profile-Packages: kmod-rtc-pcf8563 kmod-ath10k ath10k-firmware-qca988x
+Target-Profile-Description:
+Build firmware images for Zyxel NBG 6716
+@@
+
+Target: ar71xx/mikrotik
+Target-Board: ar71xx
+Target-Name: Mikrotik devices with NAND/NOR flash
+Target-Arch: mips
+Target-Arch-Packages: mips_24kc
+Target-Features: dt gpio minor mips16 nand pci ramdisk squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+CPU-Type: 24kc
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images for Atheros AR71xx/AR913x based Mikrotik boards.
+	e.g. MikroTik RB-4xx or RB-750
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd nand-utils dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd odhcp6c kmod-gpio-button-hotplug swconfig kmod-ath9k wpad-mini uboot-envtools iwinfo
+Target-Profile: Default
+Target-Profile-Priority: 1
+Target-Profile-Name: Default Profile
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport nand-utils 
+Target-Profile-Description:
+	Default package set compatible with most boards.
+@@
+
+Target-Profile: DEVICE_nand-64m
+Target-Profile-Name: MikroTik RouterBoard with 64 MB NAND flash
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for MikroTik RouterBoard with 64 MB NAND flash
+@@
+
+Target-Profile: DEVICE_nand-large
+Target-Profile-Name: MikroTik RouterBoard with >= 128 MB NAND flash
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport
+Target-Profile-Description:
+Build firmware images for MikroTik RouterBoard with >= 128 MB NAND flash
+@@
+
+

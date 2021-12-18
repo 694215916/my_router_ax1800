@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/misc/mtk_failsafe/Makefile
+Package: mtk_failsafe
+Submenu: Misc
+Version: 1-r0-
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: mtk failsafe script
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   mtk init script for failsafe mode
+
+@@
+
+

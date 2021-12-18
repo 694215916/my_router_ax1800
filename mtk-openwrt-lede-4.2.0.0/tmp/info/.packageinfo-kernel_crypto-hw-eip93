@@ -1,0 +1,20 @@
+Source-Makefile: package/kernel/crypto-hw-eip93/Makefile
+Package: kmod-crypto-hw-eip93
+Submenu: Cryptographic API modules
+Version: <LINUX_VERSION>-0.8
+Depends: @TARGET_ramips_mt7621 +kmod-crypto-authenc +kmod-crypto-des
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Mediatek EIP93 crypto engine.
+Maintainer: 
+Source: 
+Type: ipkg
+Description: Asynchronous Kernel module to enable EIP-93 Crypto Engine
+in the Mediatek MT7621 SoC.
+
+@@
+
+

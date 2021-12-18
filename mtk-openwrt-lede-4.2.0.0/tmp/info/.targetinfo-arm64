@@ -1,0 +1,18 @@
+Source-Makefile: target/linux/arm64/Makefile
+Target: arm64
+Target-Board: arm64
+Target-Name: ARMv8 multiplatform
+Target-Arch: aarch64
+Target-Arch-Packages: aarch64_armv8-a
+Target-Features: display dt fpu gpio pci ramdisk virtio
+Target-Depends: 
+Target-Optimization: -Os -pipe -fno-caller-saves
+CPU-Type: armv8-a
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: arm64
+Target-Description:
+	Build multi-platform images for the ARMv8 instruction set architecture
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd  
+

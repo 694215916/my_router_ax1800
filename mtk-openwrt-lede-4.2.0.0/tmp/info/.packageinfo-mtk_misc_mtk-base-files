@@ -1,0 +1,22 @@
+Source-Makefile: package/mtk/misc/mtk-base-files/Makefile
+Package: mtk-base-files
+Submenu: Misc
+Version: 1-r0-
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +base-files +lua
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: base-files
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: Base filesystem for MTK OpenWrt
+Maintainer: 
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description:  This package contains a base filesystem and system scripts for MTK OpenWrt.
+
+@@
+
+

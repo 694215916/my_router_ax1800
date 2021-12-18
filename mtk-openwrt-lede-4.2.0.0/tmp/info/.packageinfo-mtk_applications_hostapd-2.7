@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/applications/hostapd-2.7/Makefile
+Package: hostapd-2.7
+Submenu: Applications
+Version: 2.7-0
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libnl-tiny +libopenssl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: WPA hostapd V2.7
+Maintainer: 
+Source: hostapd-2.7-3d70affa.tar.bz2
+Type: ipkg
+Description:   WPA hostapd V2.7
+
+@@
+
+

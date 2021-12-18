@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/applications/malloctest/Makefile
+Package: malloctest
+Submenu: Applications
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: malloc test Daemon
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   This is a sample daemon for test and verify function for malloc.
+
+@@
+
+

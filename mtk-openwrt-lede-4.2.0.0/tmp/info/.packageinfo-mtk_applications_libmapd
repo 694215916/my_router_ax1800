@@ -1,0 +1,19 @@
+Source-Makefile: package/mtk/applications/libmapd/Makefile
+Package: libmapd
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: mtk mapd library
+Maintainer: 
+Source: libmapd-f227858c.tar.bz2
+Type: ipkg
+Description:   mtk mapd library
+
+@@
+
+

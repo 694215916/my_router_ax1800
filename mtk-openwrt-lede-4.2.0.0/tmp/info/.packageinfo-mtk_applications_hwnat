@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/applications/hwnat/Makefile
+Package: hwnat
+Submenu: Applications
+Version: 4200
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @PACKAGE_kmod-hw_nat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: Hardware NAT command
+Maintainer: 
+Source: hwnat-5467d09e.tar.gz
+Type: ipkg
+Description:   An program to query info from hwnat driver
+
+@@
+
+

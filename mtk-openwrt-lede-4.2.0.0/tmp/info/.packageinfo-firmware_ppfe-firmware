@@ -1,0 +1,22 @@
+Source-Makefile: package/firmware/ppfe-firmware/Makefile
+Package: ppfe-ls1012ardb
+Version: v1.0-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_layerscape
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: ls1012ardb
+Section: firmware
+Category: Firmware
+Title: PPFE firmware ppfe-v1.0 for NXP ls1012a Dev Board (must enable CONFIG_NO_STRIP=y for avoid firmware be broke)
+Maintainer: Jiang Yutang <jiangyutang1978@gmail.com>
+Source: ppfe-v1.0.tar.xz
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: Licenses/README
+Type: ipkg
+Description: PPFE firmware ppfe-v1.0 for NXP ls1012a Dev Board (must enable CONFIG_NO_STRIP=y for avoid firmware be broke)
+https://github.com/fsl-jyt/ppfe.git
+Jiang Yutang <jiangyutang1978@gmail.com>
+@@
+
+

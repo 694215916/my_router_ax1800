@@ -1,0 +1,58 @@
+#
+# hua.shao@mediatek.com
+#
+# MTK Property Software.
+#
+
+include $(TOPDIR)/rules.mk
+
+PKG_NAME:=long_loop
+PKG_RELEASE:=1
+PKG_SOURCE:=$(PKG_NAME).tar.gz
+
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
+PKG_KCONFIG:=RALINK_MT7620 RALINK_MT7621 RALINK_MT7628 RAETH_ESW ETH_ONE_PORT_ONLY
+PKG_CONFIG_DEPENDS:=$(foreach c, $(PKG_KCONFIG),$(if $(CONFIG_$c),CONFIG_$(c)))
+
+
+include $(INCLUDE_DIR)/package.mk
+include $(INCLUDE_DIR)/kernel.mk
+
+define Package/longloopd
+  SECTION:=MTK Properties
+  CATEGORY:=MTK Properties
+  TITLE:=Daemon to monitor switch link for long distance(>100m)
+  SUBMENU:=Applications
+endef
+
+define Package/longloopd/description
+  Daemon to monitor switch link for long distance(>100m)
+endef
+
+
+TARGET_CFLAGS += \
+	-I$(LINUX_DIR)/include \
+	$(foreach c, $(PKG_KCONFIG),$(if $(CONFIG_$c),-DCONFIG_$(c)=$(CONFIG_$c)))
+
+ifeq ($(CONFIG_TARGET_mediatek),y)
+TARGET_CFLAGS += \
+        -I$(LINUX_DIR)/drivers/net/ethernet/raeth
+else
+TARGET_CFLAGS +=  \
+        -I$(LINUX_DIR)/drivers/net/raeth
+endif
+
+TARGET_CFLAGS += -DCONFIG_SUPPORT_OPENWRT
+MAKE_FLAGS += CONFIG_SUPPORT_OPENWRT=y
+
+define Package/longloopd/install
+	$(INSTALL_DIR) $(1)/usr/bin
+	$(INSTALL_DIR) $(1)/etc/longloopd
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/long_loop $(1)/usr/bin
+	-$(CP) ./files/*.sh  $(1)/etc/longloopd/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/long_loop ./files/long_loop_$(CONFIG_TARGET_SUBTARGET)
+endef
+
+
+$(eval $(call BuildPackage,longloopd))
+

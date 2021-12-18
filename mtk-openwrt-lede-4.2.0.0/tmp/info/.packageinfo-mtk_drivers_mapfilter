@@ -1,0 +1,19 @@
+Source-Makefile: package/mtk/drivers/mapfilter/Makefile
+Package: kmod-mapfilter
+Submenu: Drivers
+Version: <LINUX_VERSION>-
+Depends: 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: MTK Properties
+Title: MTK map filter
+Maintainer: 
+Source: mapfilter-5d775a49.tar.bz2
+Type: ipkg
+Description: MTK map filter
+
+@@
+
+

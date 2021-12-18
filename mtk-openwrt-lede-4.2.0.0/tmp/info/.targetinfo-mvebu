@@ -1,0 +1,123 @@
+Source-Makefile: target/linux/mvebu/Makefile
+Target: mvebu
+Target-Board: mvebu
+Target-Name: Marvell Armada 37x/38x/XP
+Target-Arch: arm
+Target-Arch-Packages: arm_cortex-a9_vfpv3
+Target-Features: arm_v7 dt fpu gpio nand pci pcie rtc squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mcpu=cortex-a9 -mfpu=vfpv3-d16
+CPU-Type: cortex-a9+vfpv3
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd odhcp6c uboot-envtools kmod-gpio-button-hotplug 
+Target-Profile: Default
+Target-Profile-Name: Default Profile (all drivers)
+Target-Profile-Packages: kmod-mwlwifi wpad-mini swconfig uboot-mvebu-clearfog mkf2fs e2fsprogs iwinfo
+Target-Profile-Description:
+	Default package set compatible with most boards.
+@@
+
+Target-Profile: DEVICE_linksys-wrt1200ac
+Target-Profile-Name: Linksys WRT1200AC (Caiman)
+Target-Profile-Packages: kmod-mwlwifi wpad-mini swconfig
+Target-Profile-Description:
+Build firmware images for Linksys WRT1200AC (Caiman)
+@@
+
+Target-Profile: DEVICE_linksys-wrt1900acv2
+Target-Profile-Name: Linksys WRT1900ACv2 (Cobra)
+Target-Profile-Packages: kmod-mwlwifi wpad-mini swconfig
+Target-Profile-Description:
+Build firmware images for Linksys WRT1900ACv2 (Cobra)
+@@
+
+Target-Profile: DEVICE_linksys-wrt3200acm
+Target-Profile-Name: Linksys WRT3200ACM (Rango)
+Target-Profile-Packages: kmod-mwlwifi wpad-mini swconfig kmod-mwifiex-sdio
+Target-Profile-Description:
+Build firmware images for Linksys WRT3200ACM (Rango)
+@@
+
+Target-Profile: DEVICE_linksys-wrt1900acs
+Target-Profile-Name: Linksys WRT1900ACS (Shelby)
+Target-Profile-Packages: kmod-mwlwifi wpad-mini swconfig
+Target-Profile-Description:
+Build firmware images for Linksys WRT1900ACS (Shelby)
+@@
+
+Target-Profile: DEVICE_linksys-wrt1900ac
+Target-Profile-Name: Linksys WRT1900AC (Mamba)
+Target-Profile-Packages: kmod-mwlwifi wpad-mini swconfig
+Target-Profile-Description:
+Build firmware images for Linksys WRT1900AC (Mamba)
+@@
+
+Target-Profile: DEVICE_openblocks-ax3-4
+Target-Profile-Name: Plat'Home OpenBlocks AX3
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Plat'Home OpenBlocks AX3
+@@
+
+Target-Profile: DEVICE_armada-385-db-ap
+Target-Profile-Name: Marvell Armada 385 DB AP (DB-88F6820-AP)
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Marvell Armada 385 DB AP (DB-88F6820-AP)
+@@
+
+Target-Profile: DEVICE_armada-370-db
+Target-Profile-Name: Marvell Armada 370 DB (DB-88F6710-BP-DDR3)
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Marvell Armada 370 DB (DB-88F6710-BP-DDR3)
+@@
+
+Target-Profile: DEVICE_armada-370-rd
+Target-Profile-Name: Marvell Armada 370 RD (RD-88F6710-A1)
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Marvell Armada 370 RD (RD-88F6710-A1)
+@@
+
+Target-Profile: DEVICE_armada-xp-db
+Target-Profile-Name: Marvell Armada XP DB (DB-78460-BP)
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Marvell Armada XP DB (DB-78460-BP)
+@@
+
+Target-Profile: DEVICE_armada-xp-gp
+Target-Profile-Name: Marvell Armada XP GP (DB-MV784MP-GP)
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Marvell Armada XP GP (DB-MV784MP-GP)
+@@
+
+Target-Profile: DEVICE_armada-388-rd
+Target-Profile-Name: Marvell Armada 388 RD (RD-88F6820-AP)
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Marvell Armada 388 RD (RD-88F6820-AP)
+@@
+
+Target-Profile: DEVICE_armada-388-clearfog
+Target-Profile-Name: SolidRun ClearFog
+Target-Profile-Packages: mkf2fs e2fsprogs swconfig kmod-fs-vfat kmod-nls-cp437 kmod-nls-iso8859-1
+Target-Profile-Description:
+Build firmware images for SolidRun ClearFog
+@@
+
+Target-Profile: DEVICE_globalscale-mirabox
+Target-Profile-Name: Globalscale Mirabox
+Target-Profile-Packages: 
+Target-Profile-Description:
+Build firmware images for Globalscale Mirabox
+@@
+
+

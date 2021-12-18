@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/applications/1905daemon/Makefile
+Package: 1905daemon
+Submenu: Applications
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +wapp +libnl-tiny
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: 1905 daemon
+Maintainer: 
+Source: 1905daemon-9a281f7e.tar.bz2
+Type: ipkg
+Description:   wifi app daemon
+
+@@
+
+

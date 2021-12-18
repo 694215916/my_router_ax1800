@@ -1,0 +1,25 @@
+Source-Makefile: package/boot/uboot-mvebu/Makefile
+Package: uboot-mvebu-clearfog
+Default: m
+Version: 2016.03-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @(TARGET_DEVICE_mvebu_DEVICE_armada-388-clearfog||TARGET_mvebu_DEVICE_armada-388-clearfog||TARGET_mvebu_Default)
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: clearfog
+Section: boot
+Category: Boot Loaders
+Repository: base
+Title: U-Boot for SolidRun ClearFog A1
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: u-boot-2016.03.tar.bz2
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: Licenses/README
+Type: ipkg
+Hidden: 1
+Description: U-Boot for SolidRun ClearFog A1
+http://www.denx.de/wiki/U-Boot
+Felix Fietkau <nbd@nbd.name>
+@@
+
+

@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/applications/sigma_dut_v9.0.0/Makefile
+Package: sigma_dut
+Submenu: Applications
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +librt
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: SIGMA_DUT(WFA SIGMA DUT)
+Maintainer: 
+Source: sigma_dut-c069877e.tar.bz2
+Type: ipkg
+Description:   SIGMA_DUT
+
+@@
+
+

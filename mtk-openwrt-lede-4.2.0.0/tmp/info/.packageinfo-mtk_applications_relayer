@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/applications/relayer/Makefile
+Package: relayer
+Submenu: Applications
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: relayer for bluetooth fw combo tool test
+Maintainer: 
+Source: relayer-7d29d3dd.tar.gz
+Type: ipkg
+Description:   An program to bluetooth fw combo tool test.
+
+@@
+
+

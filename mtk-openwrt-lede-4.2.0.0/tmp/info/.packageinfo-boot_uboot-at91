@@ -1,0 +1,44 @@
+Source-Makefile: package/boot/uboot-at91/Makefile
+Package: uboot-at91-at91sam9m10g45ek_nandflash
+Version: 2016.05-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_at91
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: at91sam9m10g45ek_nandflash
+Section: boot
+Category: Boot Loaders
+Repository: base
+Title: U-Boot for the AT91SAM9M10G45-EK board (NandFlash)
+Maintainer: Ben Whitten <ben.whitten@gmail.com>
+Source: u-boot-2016.05.tar.bz2
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: Licenses/README
+Type: ipkg
+Description: U-Boot for the AT91SAM9M10G45-EK board (NandFlash)
+http://www.denx.de/wiki/U-Boot
+Ben Whitten <ben.whitten@gmail.com>
+@@
+
+Package: uboot-at91-at91sam9x5ek_nandflash
+Version: 2016.05-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_at91
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: at91sam9x5ek_nandflash
+Section: boot
+Category: Boot Loaders
+Repository: base
+Title: U-Boot for the AT91SAM9X5-EK board (NandFlash)
+Maintainer: Ben Whitten <ben.whitten@gmail.com>
+Source: u-boot-2016.05.tar.bz2
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: Licenses/README
+Type: ipkg
+Description: U-Boot for the AT91SAM9X5-EK board (NandFlash)
+http://www.denx.de/wiki/U-Boot
+Ben Whitten <ben.whitten@gmail.com>
+@@
+
+

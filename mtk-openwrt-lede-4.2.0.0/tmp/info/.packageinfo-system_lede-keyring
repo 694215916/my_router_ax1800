@@ -1,0 +1,21 @@
+Source-Makefile: package/system/lede-keyring/Makefile
+Package: lede-keyring
+Version: 2017-01-20-a50b7529880988ca96e72dede0279ff139a8ab1a-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Base system
+Repository: base
+Title: LEDE Developer Keyring
+Maintainer: John Crispin <john@phrozen.org>
+Source: lede-keyring-2017-01-20-a50b7529880988ca96e72dede0279ff139a8ab1a.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description:   The keyring of with the developer using and gpg public keys.
+http://www.lede-project.org
+John Crispin <john@phrozen.org>
+@@
+
+

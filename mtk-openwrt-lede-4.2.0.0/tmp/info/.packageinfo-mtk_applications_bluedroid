@@ -1,0 +1,23 @@
+Source-Makefile: package/mtk/applications/bluedroid/Makefile
+Package: bluedroid
+Menu: 1
+Version: mp
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +zlib +libstdcpp
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: mtk bluedroid library
+Maintainer: 
+Source: bluedroid-mp.tar.gz
+Type: ipkg
+Description:   mtk bluedroid library
+
+@@
+Config:
+	source "package/mtk/applications/bluedroid/Config.in"
+@@
+
+

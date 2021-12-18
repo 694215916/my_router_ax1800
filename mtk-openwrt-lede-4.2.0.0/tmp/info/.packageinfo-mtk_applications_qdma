@@ -1,0 +1,20 @@
+Source-Makefile: package/mtk/applications/qdma/Makefile
+Package: qdma
+Submenu: Applications
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @(TARGET_ramips_mt7621||TARGET_mediatek)
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: QDMA configuration tool
+Maintainer: 
+Source: qdma-5aab86d1.tar.gz
+Type: ipkg
+Description:   QDMA configuration tool
+
+@@
+
+

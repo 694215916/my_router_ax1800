@@ -1,0 +1,20 @@
+Source-Makefile: package/network/utils/wireshark/Makefile
+Package: wireshark
+Version: 2.4.3-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @USE_GLIBC +libgcrypt +glib2 +libpcap +zlib +libxml2
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: TShark can dump and analyze network traffic
+Maintainer: 
+Source: wireshark-2.4.3.tar.xz
+Type: ipkg
+Description:   TShark is a network protocol analyzer.
+https://www.wireshark.org
+
+@@
+
+

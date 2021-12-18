@@ -1,0 +1,184 @@
+Source-Makefile: package/firmware/ath10k-firmware/Makefile
+Package: ath10k-firmware-qca9887
+Version: 2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: ath10k firmware for QCA9887 devices
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: ath10k-firmware-2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd.tar.xz
+Type: ipkg
+Description: ath10k firmware for QCA9887 devices
+https://github.com/kvalo/ath10k-firmware.git
+Felix Fietkau <nbd@nbd.name>
+@@
+
+Package: ath10k-firmware-qca988x
+Default: PACKAGE_kmod-ath10k
+Version: 2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: ath10k firmware for QCA988x devices
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: ath10k-firmware-2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd.tar.xz
+Type: ipkg
+Description: ath10k firmware for QCA988x devices
+https://github.com/kvalo/ath10k-firmware.git
+Felix Fietkau <nbd@nbd.name>
+@@
+
+Package: ath10k-firmware-qca99x0
+Version: 2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: ath10k firmware for QCA99x0 devices
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: ath10k-firmware-2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd.tar.xz
+Type: ipkg
+Description: Standard ath10k firmware for QCA99x0 from QCA
+This firmware conflicts with the CT 99x0 firmware, so select only
+one.
+https://github.com/kvalo/ath10k-firmware.git
+Felix Fietkau <nbd@nbd.name>
+@@
+
+Package: ath10k-firmware-qca6174
+Version: 2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: ath10k firmware for QCA6174 devices
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: ath10k-firmware-2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd.tar.xz
+Type: ipkg
+Description: ath10k firmware for QCA6174 devices
+https://github.com/kvalo/ath10k-firmware.git
+Felix Fietkau <nbd@nbd.name>
+@@
+
+Package: ath10k-firmware-qca9984
+Version: 2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: ath10k firmware for QCA9984 devices
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: ath10k-firmware-2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd.tar.xz
+Type: ipkg
+Description: ath10k firmware for QCA9984 devices
+https://github.com/kvalo/ath10k-firmware.git
+Felix Fietkau <nbd@nbd.name>
+@@
+
+Package: ath10k-firmware-qca9887-ct
+Version: 2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: ath10k CT 10.1 firmware for QCA9887 devices
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: ath10k-firmware-2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd.tar.xz
+Type: ipkg
+Description: Alternative ath10k firmware for QCA9887 from Candela Technologies.
+Enables IBSS and other features.  See:
+http://www.candelatech.com/ath10k-10.1.php
+This firmware conflicts with the standard 9887 firmware, so select only
+one.
+https://github.com/kvalo/ath10k-firmware.git
+Felix Fietkau <nbd@nbd.name>
+@@
+
+Package: ath10k-firmware-qca988x-ct
+Version: 2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: ath10k CT 10.1 firmware for QCA988x devices
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: ath10k-firmware-2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd.tar.xz
+Type: ipkg
+Description: Alternative ath10k firmware for QCA988X from Candela Technologies.
+Enables IBSS and other features.  See:
+http://www.candelatech.com/ath10k-10.1.php
+This firmware will NOT be used unless the standard ath10k-firmware-qca988x
+is un-selected since the driver will try to load firmware-5.bin before
+firmware-2.bin
+https://github.com/kvalo/ath10k-firmware.git
+Felix Fietkau <nbd@nbd.name>
+@@
+
+Package: ath10k-firmware-qca99x0-ct
+Version: 2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: ath10k CT 10.4.3 firmware for QCA99x0 devices
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: ath10k-firmware-2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd.tar.xz
+Type: ipkg
+Description: Alternative ath10k firmware for QCA99x0 from Candela Technologies.
+Enables IBSS and other features.  See:
+http://www.candelatech.com/ath10k-10.4.php
+This firmware conflicts with the standard 99x0 firmware, so select only
+one.
+https://github.com/kvalo/ath10k-firmware.git
+Felix Fietkau <nbd@nbd.name>
+@@
+
+Package: ath10k-firmware-qca9984-ct
+Version: 2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: ath10k CT 10.4.3 firmware for QCA9984 devices
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: ath10k-firmware-2017-01-11-ab432c60437931a165f0aff1a6e3371f358b75dd.tar.xz
+Type: ipkg
+Description: Alternative ath10k firmware for QCA9984 from Candela Technologies.
+Enables IBSS and other features.  See:
+http://www.candelatech.com/ath10k-10.4.php
+This firmware conflicts with the standard 9984 firmware, so select only
+one.
+https://github.com/kvalo/ath10k-firmware.git
+Felix Fietkau <nbd@nbd.name>
+@@
+
+

@@ -1,0 +1,92 @@
+Source-Makefile: target/linux/mpc85xx/Makefile
+Target: mpc85xx
+Target-Board: mpc85xx
+Target-Name: Freescale MPC85xx
+Target-Arch: powerpc
+Target-Arch-Packages: powerpc_8540
+Target-Features: dt gpio pci pcie squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mcpu=8540
+CPU-Type: 8540
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: powerpc
+Target-Description:
+	Build images for the Freescale MPC85xx based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd odhcp6c kmod-input-core kmod-input-gpio-keys kmod-button-hotplug kmod-leds-gpio swconfig kmod-ath9k wpad-mini iwinfo
+Target-Profile: Default
+Target-Profile-Name: Default Profile (all drivers)
+Target-Profile-Packages:  
+Target-Profile-Description:
+	Default package set compatible with most boards.
+@@
+
+Target-Profile: TLWDR4900
+Target-Profile-Name: TP-Link TL-WDR4900
+Target-Profile-Packages: kmod-ath9k wpad-mini iwinfo
+Target-Profile-Description:
+	Package set optimized for the TP-Link TL-WDR4900.
+@@
+
+Target: mpc85xx/generic
+Target-Board: mpc85xx
+Target-Name: Generic
+Target-Arch: powerpc
+Target-Arch-Packages: powerpc_8540
+Target-Features: dt gpio pci pcie squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mcpu=8540
+CPU-Type: 8540
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: powerpc
+Target-Description:
+	Build firmware images for generic MPC85xx based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd odhcp6c kmod-input-core kmod-input-gpio-keys kmod-button-hotplug kmod-leds-gpio swconfig kmod-ath9k wpad-mini iwinfo
+Target-Profile: Default
+Target-Profile-Name: Default Profile (all drivers)
+Target-Profile-Packages:  
+Target-Profile-Description:
+	Default package set compatible with most boards.
+@@
+
+Target-Profile: TLWDR4900
+Target-Profile-Name: TP-Link TL-WDR4900
+Target-Profile-Packages: kmod-ath9k wpad-mini iwinfo
+Target-Profile-Description:
+	Package set optimized for the TP-Link TL-WDR4900.
+@@
+
+Target: mpc85xx/p1020
+Target-Board: mpc85xx
+Target-Name: P1020
+Target-Arch: powerpc
+Target-Arch-Packages: powerpc_8540
+Target-Features: dt gpio pci pcie squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mcpu=8540
+CPU-Type: 8540
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: powerpc
+Target-Description:
+	Build firmware images for Freescale P1020 based boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd odhcp6c kmod-input-core kmod-input-gpio-keys kmod-button-hotplug kmod-leds-gpio swconfig kmod-ath9k wpad-mini iwinfo
+Target-Profile: Default
+Target-Profile-Name: Default Profile (all drivers)
+Target-Profile-Packages:  
+Target-Profile-Description:
+	Default package set compatible with most boards.
+@@
+
+Target-Profile: TLWDR4900
+Target-Profile-Name: TP-Link TL-WDR4900
+Target-Profile-Packages: kmod-ath9k wpad-mini iwinfo
+Target-Profile-Description:
+	Package set optimized for the TP-Link TL-WDR4900.
+@@
+
+

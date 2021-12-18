@@ -1,0 +1,50 @@
+Source-Makefile: target/linux/gemini/Makefile
+Target: gemini
+Target-Board: gemini
+Target-Name: Cortina Systems CS351x
+Target-Arch: arm
+Target-Arch-Packages: arm_fa526
+Target-Features: gpio pci rtc squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mcpu=fa526
+CPU-Type: fa526
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd odhcp6c 
+Target: gemini/raidsonic
+Target-Board: gemini
+Target-Name: Raidsonic NAS42x0
+Target-Arch: arm
+Target-Arch-Packages: arm_fa526
+Target-Features: gpio pci rtc squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mcpu=fa526
+CPU-Type: fa526
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+	Build firmware images for Raidsonic NAS4220.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd kmod-usb2 kmod-md-mod kmod-md-linear kmod-md-multipath kmod-md-raid0 kmod-md-raid1 kmod-md-raid10 kmod-md-raid456 kmod-fs-btrfs kmod-fs-cifs kmod-fs-ext4 kmod-fs-nfs kmod-fs-nfsd kmod-fs-ntfs kmod-fs-reiserfs kmod-fs-vfat kmod-nls-utf8 kmod-usb-storage-extras samba36-server mdadm cfdisk fdisk e2fsprogs badblocks dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd odhcp6c 
+Target: gemini/wiligear
+Target-Board: gemini
+Target-Name: Wiligear WBD-222/111
+Target-Arch: arm
+Target-Arch-Packages: arm_fa526
+Target-Features: gpio pci rtc squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mcpu=fa526
+CPU-Type: fa526
+Linux-Version: 4.4.198
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+	Build firmware images for Wiligear WBD-222 and WBD-111 boards.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd dnsmasq iptables ip6tables ppp ppp-mod-pppoe firewall odhcpd odhcp6c 
+

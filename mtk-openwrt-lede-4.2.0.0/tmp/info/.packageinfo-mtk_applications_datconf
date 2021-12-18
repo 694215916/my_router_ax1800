@@ -1,0 +1,72 @@
+Source-Makefile: package/mtk/applications/datconf/Makefile
+Package: libkvcutil
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: C library for Key-value based config files
+Maintainer: Weijie Gao <weijie.gao@mediatek.com>
+Source: datconf-aba5c019.tar.bz2
+Type: ipkg
+Description: C library for Key-value based config files
+Weijie Gao <weijie.gao@mediatek.com>
+@@
+
+Package: kvcedit
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libkvcutil
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: util
+Category: Utilities
+Repository: base
+Title: Utility for editing key-value based config files
+Maintainer: Weijie Gao <weijie.gao@mediatek.com>
+Source: datconf-aba5c019.tar.bz2
+Type: ipkg
+Description: Utility for editing key-value based config files
+Weijie Gao <weijie.gao@mediatek.com>
+@@
+
+Package: datconf
+Submenu: Applications
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +kvcedit
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: Utility for editing dat files used by MediaTek Wi-Fi drivers
+Maintainer: Weijie Gao <weijie.gao@mediatek.com>
+Source: datconf-aba5c019.tar.bz2
+Type: ipkg
+Description: Utility for editing dat files used by MediaTek Wi-Fi drivers
+Weijie Gao <weijie.gao@mediatek.com>
+@@
+
+Package: datconf-lua
+Submenu: Applications
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +datconf +liblua
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: base
+Title: Lua plugin for datconf
+Maintainer: Weijie Gao <weijie.gao@mediatek.com>
+Source: datconf-aba5c019.tar.bz2
+Type: ipkg
+Description: Lua plugin for datconf
+Weijie Gao <weijie.gao@mediatek.com>
+@@
+
+
