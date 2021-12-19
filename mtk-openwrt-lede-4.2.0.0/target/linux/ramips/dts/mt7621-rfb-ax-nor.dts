@@ -170,7 +170,7 @@
 
 		partition@90000 {
 			label = "firmware";
-			reg = <0x90000 0xf70000>;
+			reg = <0x90000 0x1f70000>;
 		};
 	};
 };
