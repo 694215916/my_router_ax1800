@@ -1,0 +1,31 @@
+--- a/drivers/mtd/spi-nor/spi-nor.c
++++ b/drivers/mtd/spi-nor/spi-nor.c
+@@ -198,8 +198,13 @@
+ 	case SNOR_MFR_WINBOND:
+ 		if (need_wren)
+ 			write_enable(nor);
++#define	SPINOR_OP_EX4B_XMC		0x29	/* Exit 4-byte mode XMC*/
+ 
+-		cmd = enable ? SPINOR_OP_EN4B : SPINOR_OP_EX4B;
++		if (JEDEC_MFR(info) == SNOR_MFR_MACRONIX)	//xmc
++			cmd = enable ? SPINOR_OP_EN4B : SPINOR_OP_EX4B_XMC;
++		else	
++			cmd = enable ? SPINOR_OP_EN4B : SPINOR_OP_EX4B;
++//		cmd = enable ? SPINOR_OP_EN4B : SPINOR_OP_EX4B;
+ 		status = nor->write_reg(nor, cmd, NULL, 0);
+ 		if (need_wren)
+ 			write_disable(nor);
+@@ -1311,8 +1316,12 @@
+ 		nor->addr_width = info->addr_width;
+ 	else if (mtd->size > 0x1000000) {
+ 		/* enable 4-byte addressing if the device exceeds 16MiB */
++		set_4byte(nor, info, 0);
+ 		nor->addr_width = 4;
+-		if (JEDEC_MFR(info) == SNOR_MFR_SPANSION) {
++		if (JEDEC_MFR(info) == SNOR_MFR_SPANSION ||
++			JEDEC_MFR(info) == 0x00EF ||		//winbon
++			JEDEC_MFR(info) == CFI_MFR_MACRONIX ||
++			JEDEC_MFR(info) == CFI_MFR_ST) {
+ 			/* Dedicated 4-byte command set */
+ 			switch (nor->flash_read) {
+ 			case SPI_NOR_QUAD:
