@@ -45,27 +45,27 @@ endef
 
 define Build/InstallDev
 	mkdir -p $(1)/usr/include
-	$(CP)	$(PKG_BUILD_DIR)/bt_others/bluetooth_mw/inc/*.* \
-		$(1)/usr/include/
+#	$(CP)	$(PKG_BUILD_DIR)/bt_others/bluetooth_mw/inc/*.* \
+#		$(1)/usr/include/
 	mkdir -p $(1)/usr/include/config
-	$(CP)	$(PKG_BUILD_DIR)/bt_others/bluetooth_mw/inc/config/*.* \
-		$(1)/usr/include/config
+#	$(CP)	$(PKG_BUILD_DIR)/bt_others/bluetooth_mw/inc/config/*.* \
+#		$(1)/usr/include/config
 	mkdir -p $(1)/usr/lib
-	$(CP)   $(PKG_BUILD_DIR)/bt_others/bluetooth_tool/prebuilts/lib/*.so $(1)/usr/lib/
+#	$(CP)   $(PKG_BUILD_DIR)/bt_others/bluetooth_tool/prebuilts/lib/*.so $(1)/usr/lib/
 endef
 
 define Package/bluedroid/install
-	$(INSTALL_DIR) $(1)/usr/lib
-	$(CP) $(PKG_BUILD_DIR)/bt_others/bluetooth_tool/prebuilts/lib/*.so $(1)/usr/lib/
-	$(INSTALL_DIR) $(1)/usr/bin/
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/bt_others/bluetooth_tool/prebuilts/bin/btmw-test $(1)/usr/bin/
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/bt_others/bluetooth_tool/prebuilts/bin/picus $(1)/usr/bin/
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/bt_others/bluetooth_tool/prebuilts/bin/boots $(1)/usr/bin/
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/bt_others/bluetooth_tool/prebuilts/bin/boots_srv $(1)/usr/bin/
+#	$(INSTALL_DIR) $(1)/usr/lib
+#	$(CP) $(PKG_BUILD_DIR)/bt_others/bluetooth_tool/prebuilts/lib/*.so $(1)/usr/lib/
+#	$(INSTALL_DIR) $(1)/usr/bin/
+#	$(INSTALL_BIN) $(PKG_BUILD_DIR)/bt_others/bluetooth_tool/prebuilts/bin/btmw-test $(1)/usr/bin/
+#	$(INSTALL_BIN) $(PKG_BUILD_DIR)/bt_others/bluetooth_tool/prebuilts/bin/picus $(1)/usr/bin/
+#	$(INSTALL_BIN) $(PKG_BUILD_DIR)/bt_others/bluetooth_tool/prebuilts/bin/boots $(1)/usr/bin/
+#	$(INSTALL_BIN) $(PKG_BUILD_DIR)/bt_others/bluetooth_tool/prebuilts/bin/boots_srv $(1)/usr/bin/
 	mkdir -p $(1)/etc/bluedroid
-	$(INSTALL_DIR) $(1)/etc/bluedroid
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/bt_others/bluetooth_tool/prebuilts/conf/bt_stack.conf $(1)/etc/bluedroid/
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/bt_others/bluetooth_tool/prebuilts/conf/bt_did.conf $(1)/etc/bluedroid/
+#	$(INSTALL_DIR) $(1)/etc/bluedroid
+#	$(INSTALL_DATA) $(PKG_BUILD_DIR)/bt_others/bluetooth_tool/prebuilts/conf/bt_stack.conf $(1)/etc/bluedroid/
+#	$(INSTALL_DATA) $(PKG_BUILD_DIR)/bt_others/bluetooth_tool/prebuilts/conf/bt_did.conf $(1)/etc/bluedroid/
 endef
 
 $(eval $(call BuildPackage,bluedroid))
